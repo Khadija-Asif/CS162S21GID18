@@ -246,8 +246,6 @@ public class MainScreen extends javax.swing.JFrame {
         // TODO add your handling code here:
         if (this.getExtendedState() != MainScreen.MAXIMIZED_BOTH) {
             this.setExtendedState(MainScreen.MAXIMIZED_BOTH);
-            this.setExtendedState(MainScreen.MAXIMIZED_HORIZ);
-            this.setExtendedState(MainScreen.MAXIMIZED_VERT);
 
         } else {
             this.setExtendedState(MainScreen.NORMAL);
