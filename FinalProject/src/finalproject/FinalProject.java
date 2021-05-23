@@ -24,14 +24,8 @@ public class FinalProject {
         /*DirectorLogin loginD = new DirectorLogin();
         loginD.setVisible(true);*/
         
-        /*Receipt r = new Receipt ();
-        r.setVisible(true);*/
-        
-        /*CustomerSignup signup = new CustomerSignup();
-        signup.setVisible(true);*/
-        
-        Feedback f = new Feedback();
-        f.setVisible(true);
+        CustomerSignup signup = new CustomerSignup();
+        signup.setVisible(true);
     }
 
 }
