@@ -18,8 +18,14 @@ public class FinalProject {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        MainScreen frame = new MainScreen();
-        frame.setVisible(true);
+        /*MainScreen frame = new MainScreen();
+        frame.setVisible(true);*/
+        
+        /*DirectorLogin loginD = new DirectorLogin();
+        loginD.setVisible(true);*/
+        
+        CustomerSignup signup = new CustomerSignup();
+        signup.setVisible(true);
     }
 
 }
