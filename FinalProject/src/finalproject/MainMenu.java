@@ -12,12 +12,12 @@ import javax.swing.JPanel;
  *
  * @author KHADIJA
  */
-public class MainScreen extends javax.swing.JFrame {
+public class MainMenu extends javax.swing.JFrame {
 
     /**
-     * Creates new form MainScreen
+     * Creates new form MainMenu
      */
-    public MainScreen() {
+    public MainMenu() {
         initComponents();
     }
 
@@ -39,9 +39,10 @@ public class MainScreen extends javax.swing.JFrame {
         MinLabel = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        GuestButton = new javax.swing.JButton();
+        SignUpButton = new javax.swing.JButton();
+        SigninButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -75,20 +76,20 @@ public class MainScreen extends javax.swing.JFrame {
         closePannel.setLayout(closePannelLayout);
         closePannelLayout.setHorizontalGroup(
             closePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(closePannelLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, closePannelLayout.createSequentialGroup()
+                .addContainerGap(28, Short.MAX_VALUE)
                 .addComponent(CloseLabel)
-                .addContainerGap(21, Short.MAX_VALUE))
+                .addContainerGap())
         );
         closePannelLayout.setVerticalGroup(
             closePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(closePannelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addContainerGap()
                 .addComponent(CloseLabel)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.add(closePannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 80, 80));
+        jPanel3.add(closePannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 80, 60));
 
         MinPannel.setBackground(new java.awt.Color(190, 21, 88));
 
@@ -118,18 +119,18 @@ public class MainScreen extends javax.swing.JFrame {
         MinPannelLayout.setVerticalGroup(
             MinPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MinPannelLayout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(MinLabel)
-                .addGap(21, 21, 21))
+                .addContainerGap())
         );
 
-        jPanel3.add(MinPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, -1));
+        jPanel3.add(MinPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, 60));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1600, 0, 200, 80));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 0, 200, 60));
 
         jPanel6.setBackground(new java.awt.Color(190, 21, 88));
 
-        jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("One-Click Pick");
 
@@ -144,59 +145,92 @@ public class MainScreen extends javax.swing.JFrame {
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addGap(0, 5, Short.MAX_VALUE))
         );
 
-        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 60));
+        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 30));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1800, 80));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 60));
 
-        jLabel2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(190, 21, 88));
-        jLabel2.setText("Hey, You want to Buy Something?");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
-
-        jButton1.setBackground(new java.awt.Color(190, 21, 88));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Shop Now");
-        jButton1.setBorderPainted(false);
-        jButton1.setDefaultCapable(false);
-        jButton1.setFocusPainted(false);
-        jButton1.setFocusable(false);
-        jButton1.setRequestFocusEnabled(false);
-        jButton1.setRolloverEnabled(false);
-        jButton1.setVerifyInputWhenFocusTarget(false);
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        GuestButton.setBackground(new java.awt.Color(190, 21, 88));
+        GuestButton.setForeground(new java.awt.Color(255, 255, 255));
+        GuestButton.setText("Login as Guest");
+        GuestButton.setBorderPainted(false);
+        GuestButton.setDefaultCapable(false);
+        GuestButton.setFocusPainted(false);
+        GuestButton.setFocusable(false);
+        GuestButton.setRequestFocusEnabled(false);
+        GuestButton.setRolloverEnabled(false);
+        GuestButton.setVerifyInputWhenFocusTarget(false);
+        GuestButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton1MouseEntered(evt);
+                GuestButtonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton1MouseExited(evt);
+                GuestButtonMouseExited(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, 190, 40));
+        jPanel1.add(GuestButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 460, 230, 40));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/Shopping.jpg"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 1800, -1));
+        SignUpButton.setBackground(new java.awt.Color(190, 21, 88));
+        SignUpButton.setForeground(new java.awt.Color(255, 255, 255));
+        SignUpButton.setText("Sign Up");
+        SignUpButton.setBorderPainted(false);
+        SignUpButton.setDefaultCapable(false);
+        SignUpButton.setFocusPainted(false);
+        SignUpButton.setFocusable(false);
+        SignUpButton.setRequestFocusEnabled(false);
+        SignUpButton.setRolloverEnabled(false);
+        SignUpButton.setVerifyInputWhenFocusTarget(false);
+        SignUpButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                SignUpButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                SignUpButtonMouseExited(evt);
+            }
+        });
+        jPanel1.add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 390, 230, 40));
+
+        SigninButton.setBackground(new java.awt.Color(190, 21, 88));
+        SigninButton.setForeground(new java.awt.Color(255, 255, 255));
+        SigninButton.setText("Sign in");
+        SigninButton.setBorder(null);
+        SigninButton.setBorderPainted(false);
+        SigninButton.setDefaultCapable(false);
+        SigninButton.setFocusPainted(false);
+        SigninButton.setFocusable(false);
+        SigninButton.setRequestFocusEnabled(false);
+        SigninButton.setRolloverEnabled(false);
+        SigninButton.setVerifyInputWhenFocusTarget(false);
+        SigninButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                SigninButtonMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                SigninButtonMouseExited(evt);
+            }
+        });
+        SigninButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SigninButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(SigninButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 320, 230, 40));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/MainMenu.jpg"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1000, 630));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -206,6 +240,7 @@ public class MainScreen extends javax.swing.JFrame {
      {
          hover.setBackground(rand);
      }
+     
     private void CloseLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseLabelMouseClicked
         // TODO add your handling code here:
         System.exit(0);
@@ -236,21 +271,39 @@ public class MainScreen extends javax.swing.JFrame {
         changeColor(MinPannel, new Color(190,21,88));
     }//GEN-LAST:event_MinLabelMouseExited
 
-    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
+    private void SignUpButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignUpButtonMouseEntered
         // TODO add your handling code here:
-        jButton1.setBackground(new Color(222, 142, 174));
-    }//GEN-LAST:event_jButton1MouseEntered
+        SignUpButton.setBackground(new Color(222, 142, 174));
+    }//GEN-LAST:event_SignUpButtonMouseEntered
 
-    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
+    private void SignUpButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignUpButtonMouseExited
         // TODO add your handling code here:
-        jButton1.setBackground(new Color(190,21,88));
-    }//GEN-LAST:event_jButton1MouseExited
+        SignUpButton.setBackground(new Color(190,21,88));
+    }//GEN-LAST:event_SignUpButtonMouseExited
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void GuestButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuestButtonMouseEntered
         // TODO add your handling code here:
-        MainMenu main = new MainMenu();
-        main.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        GuestButton.setBackground(new Color(222, 142, 174));
+    }//GEN-LAST:event_GuestButtonMouseEntered
+
+    private void GuestButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuestButtonMouseExited
+        // TODO add your handling code here:
+        GuestButton.setBackground(new Color(190,21,88));
+    }//GEN-LAST:event_GuestButtonMouseExited
+
+    private void SigninButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SigninButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SigninButtonActionPerformed
+
+    private void SigninButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SigninButtonMouseEntered
+        // TODO add your handling code here:
+        SigninButton.setBackground(new Color(222, 142, 174));
+    }//GEN-LAST:event_SigninButtonMouseEntered
+
+    private void SigninButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SigninButtonMouseExited
+        // TODO add your handling code here:
+        SigninButton.setBackground(new Color(190,21,88));
+    }//GEN-LAST:event_SigninButtonMouseExited
 
     /**
      * @param args the command line arguments
@@ -269,33 +322,34 @@ public class MainScreen extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainScreen().setVisible(true);
+                new MainMenu().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CloseLabel;
+    private javax.swing.JButton GuestButton;
     private javax.swing.JLabel MinLabel;
     private javax.swing.JPanel MinPannel;
+    private javax.swing.JButton SignUpButton;
+    private javax.swing.JButton SigninButton;
     private javax.swing.JPanel closePannel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
