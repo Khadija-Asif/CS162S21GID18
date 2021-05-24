@@ -12,12 +12,12 @@ import javax.swing.JPanel;
  *
  * @author KHADIJA
  */
-public class CustomerMenu extends javax.swing.JFrame {
+public class DeleteFromtheCartFrame extends javax.swing.JFrame {
 
     /**
-     * Creates new form MainMenu
+     * Creates new form DeleteFromtheCartFrame
      */
-    public CustomerMenu() {
+    public DeleteFromtheCartFrame() {
         initComponents();
     }
 
@@ -39,15 +39,18 @@ public class CustomerMenu extends javax.swing.JFrame {
         MinLabel = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        GuestButton = new javax.swing.JButton();
-        SignUpButton = new javax.swing.JButton();
-        SigninButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        DeleteButton = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(190, 21, 88));
@@ -77,7 +80,7 @@ public class CustomerMenu extends javax.swing.JFrame {
         closePannelLayout.setHorizontalGroup(
             closePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, closePannelLayout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addComponent(CloseLabel)
                 .addContainerGap())
         );
@@ -89,7 +92,7 @@ public class CustomerMenu extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.add(closePannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 80, 60));
+        jPanel3.add(closePannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 70, 60));
 
         MinPannel.setBackground(new java.awt.Color(190, 21, 88));
 
@@ -112,21 +115,21 @@ public class CustomerMenu extends javax.swing.JFrame {
         MinPannelLayout.setHorizontalGroup(
             MinPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MinPannelLayout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(MinLabel)
                 .addContainerGap())
         );
         MinPannelLayout.setVerticalGroup(
             MinPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MinPannelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(MinPannelLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(MinLabel)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.add(MinPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, 60));
+        jPanel3.add(MinPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 60, 60));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 0, 200, 60));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 0, 200, 60));
 
         jPanel6.setBackground(new java.awt.Color(190, 21, 88));
 
@@ -151,82 +154,70 @@ public class CustomerMenu extends javax.swing.JFrame {
 
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 30));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 60));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 60));
 
-        GuestButton.setBackground(new java.awt.Color(190, 21, 88));
-        GuestButton.setForeground(new java.awt.Color(255, 255, 255));
-        GuestButton.setText("Login as Guest");
-        GuestButton.setBorderPainted(false);
-        GuestButton.setDefaultCapable(false);
-        GuestButton.setFocusPainted(false);
-        GuestButton.setFocusable(false);
-        GuestButton.setRequestFocusEnabled(false);
-        GuestButton.setRolloverEnabled(false);
-        GuestButton.setVerifyInputWhenFocusTarget(false);
-        GuestButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(190, 21, 88));
+        jLabel2.setText("Just Click on the product and delete it!!");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 260, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(190, 21, 88));
+        jLabel3.setText("Oops, You want to Delete from the Cart?");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, 370, -1));
+
+        DeleteButton.setBackground(new java.awt.Color(190, 21, 88));
+        DeleteButton.setForeground(new java.awt.Color(255, 255, 255));
+        DeleteButton.setText("Delete Product");
+        DeleteButton.setBorder(null);
+        DeleteButton.setBorderPainted(false);
+        DeleteButton.setDefaultCapable(false);
+        DeleteButton.setFocusPainted(false);
+        DeleteButton.setFocusable(false);
+        DeleteButton.setRequestFocusEnabled(false);
+        DeleteButton.setRolloverEnabled(false);
+        DeleteButton.setVerifyInputWhenFocusTarget(false);
+        DeleteButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                GuestButtonMouseEntered(evt);
+                DeleteButtonMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                GuestButtonMouseExited(evt);
+                DeleteButtonMouseExited(evt);
             }
         });
-        jPanel1.add(GuestButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 460, 230, 40));
-
-        SignUpButton.setBackground(new java.awt.Color(190, 21, 88));
-        SignUpButton.setForeground(new java.awt.Color(255, 255, 255));
-        SignUpButton.setText("Sign Up");
-        SignUpButton.setBorderPainted(false);
-        SignUpButton.setDefaultCapable(false);
-        SignUpButton.setFocusPainted(false);
-        SignUpButton.setFocusable(false);
-        SignUpButton.setRequestFocusEnabled(false);
-        SignUpButton.setRolloverEnabled(false);
-        SignUpButton.setVerifyInputWhenFocusTarget(false);
-        SignUpButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                SignUpButtonMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                SignUpButtonMouseExited(evt);
-            }
-        });
-        jPanel1.add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 400, 230, 40));
-
-        SigninButton.setBackground(new java.awt.Color(190, 21, 88));
-        SigninButton.setForeground(new java.awt.Color(255, 255, 255));
-        SigninButton.setText("Sign in");
-        SigninButton.setBorder(null);
-        SigninButton.setBorderPainted(false);
-        SigninButton.setDefaultCapable(false);
-        SigninButton.setFocusPainted(false);
-        SigninButton.setFocusable(false);
-        SigninButton.setRequestFocusEnabled(false);
-        SigninButton.setRolloverEnabled(false);
-        SigninButton.setVerifyInputWhenFocusTarget(false);
-        SigninButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                SigninButtonMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                SigninButtonMouseExited(evt);
-            }
-        });
-        SigninButton.addActionListener(new java.awt.event.ActionListener() {
+        DeleteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SigninButtonActionPerformed(evt);
+                DeleteButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(SigninButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 340, 230, 40));
+        jPanel1.add(DeleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 300, 150, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/edit.jpg"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1000, 630));
+        jTable1.setForeground(new java.awt.Color(190, 21, 88));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Product ID", "Name", "Quantity", "Price", "Type"
+            }
+        ));
+        jTable1.setSelectionBackground(new java.awt.Color(190, 21, 88));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, 770, 90));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/cart.jpg"))); // NOI18N
+        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 990, 620));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -236,11 +227,10 @@ public class CustomerMenu extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-     public void changeColor(JPanel hover, Color rand)
+  public void changeColor(JPanel hover, Color rand)
      {
          hover.setBackground(rand);
      }
-     
     private void CloseLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseLabelMouseClicked
         // TODO add your handling code here:
         this.setVisible(false);
@@ -271,55 +261,70 @@ public class CustomerMenu extends javax.swing.JFrame {
         changeColor(MinPannel, new Color(190,21,88));
     }//GEN-LAST:event_MinLabelMouseExited
 
-    private void SignUpButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignUpButtonMouseEntered
+    private void DeleteButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteButtonMouseEntered
         // TODO add your handling code here:
-        SignUpButton.setBackground(new Color(222, 142, 174));
-    }//GEN-LAST:event_SignUpButtonMouseEntered
+        DeleteButton.setBackground(new Color(222, 142, 174));
+    }//GEN-LAST:event_DeleteButtonMouseEntered
 
-    private void SignUpButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignUpButtonMouseExited
+    private void DeleteButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteButtonMouseExited
         // TODO add your handling code here:
-        SignUpButton.setBackground(new Color(190,21,88));
-    }//GEN-LAST:event_SignUpButtonMouseExited
+        DeleteButton.setBackground(new Color(190,21,88));
+    }//GEN-LAST:event_DeleteButtonMouseExited
 
-    private void GuestButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuestButtonMouseEntered
+    private void DeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteButtonActionPerformed
         // TODO add your handling code here:
-        GuestButton.setBackground(new Color(222, 142, 174));
-    }//GEN-LAST:event_GuestButtonMouseEntered
+    }//GEN-LAST:event_DeleteButtonActionPerformed
 
-    private void GuestButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuestButtonMouseExited
-        // TODO add your handling code here:
-        GuestButton.setBackground(new Color(190,21,88));
-    }//GEN-LAST:event_GuestButtonMouseExited
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(DeleteFromtheCartFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(DeleteFromtheCartFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(DeleteFromtheCartFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(DeleteFromtheCartFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
-    private void SigninButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SigninButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SigninButtonActionPerformed
-
-    private void SigninButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SigninButtonMouseEntered
-        // TODO add your handling code here:
-        SigninButton.setBackground(new Color(222, 142, 174));
-    }//GEN-LAST:event_SigninButtonMouseEntered
-
-    private void SigninButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SigninButtonMouseExited
-        // TODO add your handling code here:
-        SigninButton.setBackground(new Color(190,21,88));
-    }//GEN-LAST:event_SigninButtonMouseExited
-
-
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new DeleteFromtheCartFrame().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel CloseLabel;
-    private javax.swing.JButton GuestButton;
+    private javax.swing.JButton DeleteButton;
     private javax.swing.JLabel MinLabel;
     private javax.swing.JPanel MinPannel;
-    private javax.swing.JButton SignUpButton;
-    private javax.swing.JButton SigninButton;
     private javax.swing.JPanel closePannel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
