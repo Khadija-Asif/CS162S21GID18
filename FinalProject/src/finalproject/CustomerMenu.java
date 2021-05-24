@@ -171,7 +171,7 @@ public class CustomerMenu extends javax.swing.JFrame {
                 GuestButtonMouseExited(evt);
             }
         });
-        jPanel1.add(GuestButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 460, 230, 40));
+        jPanel1.add(GuestButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 460, 230, 40));
 
         SignUpButton.setBackground(new java.awt.Color(190, 21, 88));
         SignUpButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -191,7 +191,7 @@ public class CustomerMenu extends javax.swing.JFrame {
                 SignUpButtonMouseExited(evt);
             }
         });
-        jPanel1.add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 390, 230, 40));
+        jPanel1.add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 400, 230, 40));
 
         SigninButton.setBackground(new java.awt.Color(190, 21, 88));
         SigninButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -216,9 +216,9 @@ public class CustomerMenu extends javax.swing.JFrame {
                 SigninButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(SigninButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 320, 230, 40));
+        jPanel1.add(SigninButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 340, 230, 40));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/MainMenu.jpg"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/edit.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1000, 630));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -242,7 +242,7 @@ public class CustomerMenu extends javax.swing.JFrame {
      
     private void CloseLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseLabelMouseClicked
         // TODO add your handling code here:
-        System.exit(0);
+        this.setVisible(false);
     }//GEN-LAST:event_CloseLabelMouseClicked
 
     private void CloseLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseLabelMouseEntered
