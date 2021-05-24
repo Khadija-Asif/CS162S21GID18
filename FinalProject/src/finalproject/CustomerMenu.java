@@ -196,7 +196,6 @@ public class CustomerMenu extends javax.swing.JFrame {
         SigninButton.setBackground(new java.awt.Color(190, 21, 88));
         SigninButton.setForeground(new java.awt.Color(255, 255, 255));
         SigninButton.setText("Sign in");
-        SigninButton.setBorder(null);
         SigninButton.setBorderPainted(false);
         SigninButton.setDefaultCapable(false);
         SigninButton.setFocusPainted(false);
