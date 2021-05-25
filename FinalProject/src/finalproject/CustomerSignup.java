@@ -33,7 +33,7 @@ public class CustomerSignup extends javax.swing.JFrame {
         minimize = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         label1 = new javax.swing.JLabel();
         label8 = new javax.swing.JLabel();
         number = new javax.swing.JTextField();
@@ -64,21 +64,22 @@ public class CustomerSignup extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         title.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        title.setForeground(new java.awt.Color(255, 255, 255));
         title.setText("Sign up");
         jPanel2.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 102, -1));
 
-        minimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_minimize_window_20px_1.png"))); // NOI18N
-        jPanel2.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 10, 29, 33));
+        minimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_minimize_window_30px.png"))); // NOI18N
+        jPanel2.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 10, 29, 33));
 
-        close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_multiply_20px_4.png"))); // NOI18N
-        jPanel2.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 10, -1, 33));
+        close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_multiply_30px_1.png"))); // NOI18N
+        jPanel2.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 10, -1, 33));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 50));
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/signin.jpg"))); // NOI18N
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 550, 610));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/signup.jpg"))); // NOI18N
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 10, 560, 610));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 550, 620));
 
@@ -98,15 +99,20 @@ public class CustomerSignup extends javax.swing.JFrame {
         label2.setText("Name");
         jPanel1.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 200, 70, 20));
 
-        password.setText("jPasswor");
+        password.setText("password");
         jPanel1.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 520, 160, -1));
 
         showPassword.setText("Show Password");
+        showPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showPasswordActionPerformed(evt);
+            }
+        });
         jPanel1.add(showPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 550, 140, -1));
 
         signup.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         signup.setText("Sign up");
-        signup.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        signup.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 51), 3, true));
         jPanel1.add(signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 600, 110, 40));
 
         label3.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
@@ -161,6 +167,17 @@ public class CustomerSignup extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void showPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPasswordActionPerformed
+        // TODO add your handling code here:
+        if(showPassword.isSelected()){
+            password.setEchoChar((char)0);
+        }
+        else
+        {
+            password.setEchoChar('*');
+        }
+    }//GEN-LAST:event_showPasswordActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -203,7 +220,7 @@ public class CustomerSignup extends javax.swing.JFrame {
     private javax.swing.JTextField city;
     private javax.swing.JLabel close;
     private javax.swing.JTextField code;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

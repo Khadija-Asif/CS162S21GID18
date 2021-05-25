@@ -47,23 +47,28 @@ public class CustomerSignin extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel3.setBackground(new java.awt.Color(255, 230, 215));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 36)); // NOI18N
         label1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_workspace_100px_3.png"))); // NOI18N
-        jPanel3.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, -1, -1));
+        jPanel3.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, -1, -1));
 
         label2.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         label2.setText("Email ID");
-        jPanel3.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 90, 40));
+        jPanel3.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 90, 40));
 
         label3.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         label3.setText("Password");
-        jPanel3.add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 100, 40));
+        jPanel3.add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 100, 40));
 
-        password.setText("jPasswor");
-        jPanel3.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 160, -1));
+        password.setText("********");
+        password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passwordActionPerformed(evt);
+            }
+        });
+        jPanel3.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 160, -1));
 
         showPassword.setText("Show Password");
         showPassword.addActionListener(new java.awt.event.ActionListener() {
@@ -71,18 +76,18 @@ public class CustomerSignin extends javax.swing.JFrame {
                 showPasswordActionPerformed(evt);
             }
         });
-        jPanel3.add(showPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 140, -1));
-        jPanel3.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, 160, -1));
+        jPanel3.add(showPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 140, -1));
+        jPanel3.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 150, 160, -1));
 
         signin.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         signin.setText("Sign in");
-        signin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
-        jPanel3.add(signin, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 150, 40));
+        signin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 51), 3, true));
+        jPanel3.add(signin, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 120, 30));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/abc.jpg"))); // NOI18N
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 760));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 460, 810));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 520, 760));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 460, 710));
 
         jPanel2.setBackground(new java.awt.Color(190, 21, 88));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -91,13 +96,13 @@ public class CustomerSignin extends javax.swing.JFrame {
         title.setText("Sign in");
         jPanel2.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 102, -1));
 
-        minimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_minimize_window_20px_1.png"))); // NOI18N
-        jPanel2.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 29, 33));
+        minimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_minimize_window_30px.png"))); // NOI18N
+        jPanel2.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, 29, 33));
 
-        close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_multiply_20px_4.png"))); // NOI18N
-        jPanel2.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 10, -1, 33));
+        close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_multiply_30px_1.png"))); // NOI18N
+        jPanel2.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, -1, 33));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 50));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 50));
 
         pack();
         setLocationRelativeTo(null);
@@ -105,7 +110,18 @@ public class CustomerSignin extends javax.swing.JFrame {
 
     private void showPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPasswordActionPerformed
         // TODO add your handling code here:
+        if(showPassword.isSelected()){
+            password.setEchoChar((char)0);
+        }
+        else
+        {
+            password.setEchoChar('*');
+        }
     }//GEN-LAST:event_showPasswordActionPerformed
+
+    private void passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_passwordActionPerformed
 
     /**
      * @param args the command line arguments

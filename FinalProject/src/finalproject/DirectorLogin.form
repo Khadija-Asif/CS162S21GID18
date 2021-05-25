@@ -81,7 +81,7 @@
             <Component class="javax.swing.JLabel" name="minimize">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/finalproject/Images/icons8_minimize_window_20px_1.png"/>
+                  <Image iconType="3" name="/finalproject/Images/icons8_minimize_window_30px.png"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -93,7 +93,7 @@
             <Component class="javax.swing.JLabel" name="close">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/finalproject/Images/icons8_multiply_20px_4.png"/>
+                  <Image iconType="3" name="/finalproject/Images/icons8_multiply_30px_1.png"/>
                 </Property>
               </Properties>
               <Constraints>
@@ -258,13 +258,16 @@
             </Component>
             <Component class="javax.swing.JPasswordField" name="password">
               <Properties>
-                <Property name="text" type="java.lang.String" value="********"/>
+                <Property name="text" type="java.lang.String" value="password"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JCheckBox" name="showPassword">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Show Password"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="showPasswordActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="signin">
               <Properties>
@@ -274,7 +277,9 @@
                 <Property name="text" type="java.lang.String" value="Sign in"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                    <LineBorder roundedCorners="true" thickness="3"/>
+                    <LineBorder roundedCorners="true" thickness="3">
+                      <Color PropertyName="color" blue="33" green="0" red="66" type="rgb"/>
+                    </LineBorder>
                   </Border>
                 </Property>
               </Properties>

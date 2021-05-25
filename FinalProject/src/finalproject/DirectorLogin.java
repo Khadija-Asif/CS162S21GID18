@@ -60,10 +60,10 @@ public class DirectorLogin extends javax.swing.JFrame {
         title.setText("Sign in");
         jPanel2.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 102, -1));
 
-        minimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_minimize_window_20px_1.png"))); // NOI18N
+        minimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_minimize_window_30px.png"))); // NOI18N
         jPanel2.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 10, 29, 33));
 
-        close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_multiply_20px_4.png"))); // NOI18N
+        close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_multiply_30px_1.png"))); // NOI18N
         jPanel2.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 10, -1, 33));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 50));
@@ -100,13 +100,18 @@ public class DirectorLogin extends javax.swing.JFrame {
 
         label3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_username_60px_1.png"))); // NOI18N
 
-        password.setText("********");
+        password.setText("password");
 
         showPassword.setText("Show Password");
+        showPassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showPasswordActionPerformed(evt);
+            }
+        });
 
         signin.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         signin.setText("Sign in");
-        signin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        signin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 51), 3, true));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -185,6 +190,17 @@ public class DirectorLogin extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void showPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPasswordActionPerformed
+        // TODO add your handling code here:
+        if(showPassword.isSelected()){
+            password.setEchoChar((char)0);
+        }
+        else
+        {
+            password.setEchoChar('*');
+        }
+    }//GEN-LAST:event_showPasswordActionPerformed
 
     /**
      * @param args the command line arguments
