@@ -27,9 +27,15 @@ public class Shipment extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel3 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        title = new javax.swing.JLabel();
+        minimize = new javax.swing.JLabel();
+        close = new javax.swing.JLabel();
         label1 = new javax.swing.JLabel();
         ID = new javax.swing.JTextField();
+        label2 = new javax.swing.JLabel();
+        name = new javax.swing.JTextField();
         label3 = new javax.swing.JLabel();
         number = new javax.swing.JTextField();
         label4 = new javax.swing.JLabel();
@@ -39,18 +45,12 @@ public class Shipment extends javax.swing.JFrame {
         city = new javax.swing.JTextField();
         label6 = new javax.swing.JLabel();
         code = new javax.swing.JTextField();
-        label9 = new javax.swing.JLabel();
-        bill = new javax.swing.JButton();
         label7 = new javax.swing.JLabel();
         email = new javax.swing.JTextField();
         label8 = new javax.swing.JLabel();
         time = new javax.swing.JTextField();
-        jPanel2 = new javax.swing.JPanel();
-        title = new javax.swing.JLabel();
-        minimize = new javax.swing.JLabel();
-        close = new javax.swing.JLabel();
-        label2 = new javax.swing.JLabel();
-        name = new javax.swing.JTextField();
+        label9 = new javax.swing.JLabel();
+        bill = new javax.swing.JButton();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jLabel1 = new javax.swing.JLabel();
 
@@ -58,70 +58,7 @@ public class Shipment extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        jPanel3.setBackground(new java.awt.Color(176, 196, 219));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
-        label1.setForeground(new java.awt.Color(255, 255, 255));
-        label1.setText("Product ID");
-        jPanel3.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 110, 20));
-        jPanel3.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 160, -1));
-
-        label3.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
-        label3.setForeground(new java.awt.Color(255, 255, 255));
-        label3.setText("Contact Number");
-        jPanel3.add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 150, 20));
-
-        number.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                numberActionPerformed(evt);
-            }
-        });
-        jPanel3.add(number, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 160, -1));
-
-        label4.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
-        label4.setForeground(new java.awt.Color(255, 255, 255));
-        label4.setText("Address");
-        jPanel3.add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 110, 40));
-
-        address.setColumns(20);
-        address.setRows(5);
-        jScrollPane1.setViewportView(address);
-
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 160, 50));
-
-        label5.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
-        label5.setForeground(new java.awt.Color(255, 255, 255));
-        label5.setText("City");
-        jPanel3.add(label5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 80, 40));
-        jPanel3.add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 160, -1));
-
-        label6.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
-        label6.setForeground(new java.awt.Color(255, 255, 255));
-        label6.setText("Postal Code");
-        jPanel3.add(label6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 120, 40));
-        jPanel3.add(code, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, 160, -1));
-
-        label9.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
-        label9.setForeground(new java.awt.Color(255, 255, 255));
-        label9.setText("Date");
-        jPanel3.add(label9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 110, 40));
-
-        bill.setFont(new java.awt.Font("Microsoft YaHei", 1, 14)); // NOI18N
-        bill.setText("Checkout bill");
-        jPanel3.add(bill, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 430, 140, 40));
-
-        label7.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
-        label7.setForeground(new java.awt.Color(255, 255, 255));
-        label7.setText("Email ID");
-        jPanel3.add(label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 110, 40));
-        jPanel3.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 160, -1));
-
-        label8.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
-        label8.setForeground(new java.awt.Color(255, 255, 255));
-        label8.setText("Shipment time");
-        jPanel3.add(label8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 140, 40));
-        jPanel3.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, 160, -1));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(190, 21, 88));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -137,27 +74,90 @@ public class Shipment extends javax.swing.JFrame {
         close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_multiply_30px_1.png"))); // NOI18N
         jPanel2.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, -1, 33));
 
-        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 50));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 50));
+
+        label1.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        label1.setForeground(new java.awt.Color(255, 255, 255));
+        label1.setText("Product ID");
+        jPanel1.add(label1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 110, 20));
+        jPanel1.add(ID, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, 160, -1));
 
         label2.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         label2.setForeground(new java.awt.Color(255, 255, 255));
         label2.setText("Name");
-        jPanel3.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 70, 20));
-        jPanel3.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 160, -1));
-        jPanel3.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, 160, -1));
+        jPanel1.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 70, 20));
+        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 160, -1));
+
+        label3.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        label3.setForeground(new java.awt.Color(255, 255, 255));
+        label3.setText("Contact Number");
+        jPanel1.add(label3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 150, 20));
+
+        number.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                numberActionPerformed(evt);
+            }
+        });
+        jPanel1.add(number, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 160, -1));
+
+        label4.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        label4.setForeground(new java.awt.Color(255, 255, 255));
+        label4.setText("Address");
+        jPanel1.add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 110, 40));
+
+        address.setColumns(20);
+        address.setRows(5);
+        jScrollPane1.setViewportView(address);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 160, 50));
+
+        label5.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        label5.setForeground(new java.awt.Color(255, 255, 255));
+        label5.setText("City");
+        jPanel1.add(label5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 80, 40));
+        jPanel1.add(city, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 160, -1));
+
+        label6.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        label6.setForeground(new java.awt.Color(255, 255, 255));
+        label6.setText("Postal Code");
+        jPanel1.add(label6, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 70, 120, 40));
+        jPanel1.add(code, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 80, 160, -1));
+
+        label7.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        label7.setForeground(new java.awt.Color(255, 255, 255));
+        label7.setText("Email ID");
+        jPanel1.add(label7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 110, 110, 40));
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 160, -1));
+
+        label8.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        label8.setForeground(new java.awt.Color(255, 255, 255));
+        label8.setText("Shipment time");
+        jPanel1.add(label8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 140, 40));
+        jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, 160, -1));
+
+        label9.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        label9.setForeground(new java.awt.Color(255, 255, 255));
+        label9.setText("Date");
+        jPanel1.add(label9, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 190, 110, 40));
+
+        bill.setFont(new java.awt.Font("Microsoft YaHei", 1, 14)); // NOI18N
+        bill.setText("Checkout bill");
+        bill.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 38, 219), 3, true));
+        jPanel1.add(bill, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 400, 140, 40));
+        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, 160, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/shipment.jpg"))); // NOI18N
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 750, 450));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 750, 450));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -213,8 +213,8 @@ public class Shipment extends javax.swing.JFrame {
     private javax.swing.JTextField email;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel label1;
     private javax.swing.JLabel label2;
