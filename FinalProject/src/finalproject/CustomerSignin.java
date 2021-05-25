@@ -82,7 +82,7 @@ public class CustomerSignin extends javax.swing.JFrame {
         signin.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         signin.setText("Sign in");
         signin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 51), 3, true));
-        jPanel3.add(signin, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, 120, 30));
+        jPanel3.add(signin, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 120, 30));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/abc.jpg"))); // NOI18N
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 460, 810));
