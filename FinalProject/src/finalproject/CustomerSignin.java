@@ -84,8 +84,8 @@ public class CustomerSignin extends javax.swing.JFrame {
         signin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 51), 3, true));
         jPanel3.add(signin, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 120, 30));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/abc.jpg"))); // NOI18N
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -70, 460, 810));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/signin.jpg"))); // NOI18N
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 660));
 
         getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 460, 710));
 
