@@ -45,14 +45,14 @@ public class Shipment extends javax.swing.JFrame {
         email = new javax.swing.JTextField();
         label8 = new javax.swing.JLabel();
         time = new javax.swing.JTextField();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jPanel2 = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
         minimize = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
         label2 = new javax.swing.JLabel();
         name = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -109,7 +109,6 @@ public class Shipment extends javax.swing.JFrame {
 
         bill.setFont(new java.awt.Font("Microsoft YaHei", 1, 14)); // NOI18N
         bill.setText("Checkout bill");
-        bill.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 66, 175), 3, true));
         jPanel3.add(bill, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 430, 140, 40));
 
         label7.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
@@ -123,7 +122,6 @@ public class Shipment extends javax.swing.JFrame {
         label8.setText("Shipment time");
         jPanel3.add(label8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 140, 40));
         jPanel3.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, 160, -1));
-        jPanel3.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, 160, -1));
 
         jPanel2.setBackground(new java.awt.Color(190, 21, 88));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -146,9 +144,10 @@ public class Shipment extends javax.swing.JFrame {
         label2.setText("Name");
         jPanel3.add(label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 70, 20));
         jPanel3.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 160, -1));
+        jPanel3.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 200, 160, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/ONE-CONTAINERSHIP.jpg"))); // NOI18N
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 44, 750, 460));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/shipment.jpg"))); // NOI18N
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 750, 450));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -213,7 +212,7 @@ public class Shipment extends javax.swing.JFrame {
     private javax.swing.JTextField code;
     private javax.swing.JTextField email;
     private com.toedter.calendar.JDateChooser jDateChooser1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
