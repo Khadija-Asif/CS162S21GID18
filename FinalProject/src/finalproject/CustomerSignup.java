@@ -188,7 +188,6 @@ public class CustomerSignup extends javax.swing.JFrame {
     private void signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupActionPerformed
         // TODO add your handling code here:
         Validator v = new Validator();
-        
         String Name = name.getText();
         String contactNo = number.getText();
         String Address = address.getText();
