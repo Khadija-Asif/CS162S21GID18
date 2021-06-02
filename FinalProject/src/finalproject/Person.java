@@ -11,20 +11,12 @@ package finalproject;
  */
 public class Person {
 
-    //Common Attributes of name, EmailID, Password, and Contact Number for Customer/Managing Director
-    private String name;
+    //Common Attributes of EmailID, Password, and Contact Number for Customer/Managing Director
+
     private String EmailID;
     private String pass;
     private String contactNumber;
 
-    /**
-     * Function to set Name
-     *
-     * @param Name
-     */
-    public void setName(String Name) {
-        this.name = Name;
-    }
 
     /**
      * Function to set Email
@@ -51,15 +43,6 @@ public class Person {
      */
     public void setPassword(String pass) {
         this.pass = pass;
-    }
-
-    /**
-     * getter function to get Name
-     *
-     * @return
-     */
-    public String getName() {
-        return this.name;
     }
 
     /**
@@ -105,22 +88,20 @@ public class Person {
      */
     @Override
     public String toString() {
-        return this.contactNumber + this.name + this.EmailID + this.pass;
+        return this.EmailID + this.pass + this.contactNumber ;
     }
 
     /**
-     * Function to set email , name , number
+     * Function to set email, password, number
      *
-     * @param name
-     * @param num
      * @param email
      * @param password
+     * @param num
      */
-    public void setter(String name, String num, String email, String password) {
-        this.name = name;
-        this.contactNumber = num;
+    public void setter(String email, String password, String num) {
         this.EmailID = email;
         this.pass = password;
+        this.contactNumber = num;
     }
 
 }
