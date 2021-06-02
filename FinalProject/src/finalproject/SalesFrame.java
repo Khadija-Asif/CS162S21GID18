@@ -100,7 +100,7 @@ public class SalesFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.add(closePannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 0, 70, 60));
+        jPanel3.add(closePannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, 70, 60));
 
         MinPannel.setBackground(new java.awt.Color(190, 21, 88));
 
@@ -135,9 +135,9 @@ public class SalesFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.add(MinPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 60, 60));
+        jPanel3.add(MinPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 70, 60));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 0, 200, 60));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 0, 220, 60));
 
         jPanel6.setBackground(new java.awt.Color(190, 21, 88));
 
@@ -162,7 +162,7 @@ public class SalesFrame extends javax.swing.JFrame {
 
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 30));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 990, 60));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 60));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -287,10 +287,10 @@ public class SalesFrame extends javax.swing.JFrame {
         jTable1.setSelectionBackground(new java.awt.Color(190, 21, 88));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 560, 900, 90));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 560, 900, 90));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/Product.jpg"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 990, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 950, 680));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -300,7 +300,7 @@ public class SalesFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
