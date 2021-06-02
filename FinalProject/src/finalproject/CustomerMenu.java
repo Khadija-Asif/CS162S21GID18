@@ -171,6 +171,11 @@ public class CustomerMenu extends javax.swing.JFrame {
                 GuestButtonMouseExited(evt);
             }
         });
+        GuestButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GuestButtonActionPerformed(evt);
+            }
+        });
         jPanel1.add(GuestButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 460, 230, 40));
 
         SignUpButton.setBackground(new java.awt.Color(190, 21, 88));
@@ -189,6 +194,11 @@ public class CustomerMenu extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 SignUpButtonMouseExited(evt);
+            }
+        });
+        SignUpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SignUpButtonActionPerformed(evt);
             }
         });
         jPanel1.add(SignUpButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 400, 230, 40));
@@ -292,6 +302,8 @@ public class CustomerMenu extends javax.swing.JFrame {
 
     private void SigninButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SigninButtonActionPerformed
         // TODO add your handling code here:
+        CustomerSignin signin = new CustomerSignin();
+        signin.setVisible(true);
     }//GEN-LAST:event_SigninButtonActionPerformed
 
     private void SigninButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SigninButtonMouseEntered
@@ -303,6 +315,16 @@ public class CustomerMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
         SigninButton.setBackground(new Color(190,21,88));
     }//GEN-LAST:event_SigninButtonMouseExited
+
+    private void GuestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuestButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GuestButtonActionPerformed
+
+    private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
+        // TODO add your handling code here:
+        CustomerSignup signup = new CustomerSignup();
+        signup.setVisible(true);
+    }//GEN-LAST:event_SignUpButtonActionPerformed
 
 
 

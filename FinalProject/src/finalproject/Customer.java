@@ -11,10 +11,20 @@ package finalproject;
  */
 public class Customer extends Person {
 
+    private String name;
     private String Address;
     private String CityName;
     private String PostalCode;
 
+    /**
+     * Function to set Name
+     *
+     * @param Name
+     */
+    public void setName(String Name) {
+        this.name = Name;
+    }
+    
     /**
      * Function to set Customer Address
      *
@@ -41,6 +51,16 @@ public class Customer extends Person {
     public void setCustomerPostalCode(String code) {
         this.PostalCode = code;
     }
+    
+    /**
+     * getter function to get Name
+     *
+     * @return
+     */
+    public String getName() {
+        return this.name;
+    }
+    
     /**
      * Function to get Address
      *
@@ -84,17 +104,19 @@ public class Customer extends Person {
      */
     @Override
     public String toString() {
-        return this.Address + this.CityName + this.PostalCode;
+        return this.name + this.Address + this.CityName + this.PostalCode;
     }
 
     /**
-     * Function to set Address , City Name , Postal Code
+     * Function to set name, set Address , City Name , Postal Code
      *
+     * @param name
      * @param address
      * @param city //City Name of a Customer/Client
      * @param code //Postal Code
      */
-    public void setter(String address, String city, String code) {
+    public void setter(String name, String address, String city, String code) {
+        this.name = name;
         this.Address = address;
         this.CityName = city;
         this.PostalCode = code;

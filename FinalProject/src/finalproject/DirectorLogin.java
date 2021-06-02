@@ -5,6 +5,8 @@
  */
 package finalproject;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Hafsa Rashid
@@ -112,6 +114,11 @@ public class DirectorLogin extends javax.swing.JFrame {
         signin.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         signin.setText("Sign in");
         signin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 51), 3, true));
+        signin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signinActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -201,6 +208,25 @@ public class DirectorLogin extends javax.swing.JFrame {
             password.setEchoChar('*');
         }
     }//GEN-LAST:event_showPasswordActionPerformed
+
+    private void signinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signinActionPerformed
+        // TODO add your handling code here:
+        Validator v = new Validator();
+        String Email = ID.getText();
+        String Password = password.getText();
+        
+        boolean chkEmail = v.Email(Email);
+        boolean chkPass = v.Password(Password);
+        
+        if(chkEmail == true && chkPass == true)
+        {
+            // frame
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "You have entered invalid credentials.");
+        }
+    }//GEN-LAST:event_signinActionPerformed
 
     /**
      * @param args the command line arguments

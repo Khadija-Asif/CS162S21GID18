@@ -5,6 +5,8 @@
  */
 package finalproject;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Hafsa Rashid
@@ -113,6 +115,11 @@ public class CustomerSignup extends javax.swing.JFrame {
         signup.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         signup.setText("Sign up");
         signup.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 51), 3, true));
+        signup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signupActionPerformed(evt);
+            }
+        });
         jPanel1.add(signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 600, 110, 40));
 
         label3.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
@@ -177,6 +184,82 @@ public class CustomerSignup extends javax.swing.JFrame {
             password.setEchoChar('*');
         }
     }//GEN-LAST:event_showPasswordActionPerformed
+
+    private void signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupActionPerformed
+        // TODO add your handling code here:
+        Validator v = new Validator();
+        
+        String Name = name.getText();
+        String contactNo = number.getText();
+        String Address = address.getText();
+        String City = city.getText();
+        String postalCode = code.getText();
+        String Email = ID.getText();
+        String Password = password.getText();
+        
+        boolean chkName = v.Name(Name);
+        boolean chkNo = v.contactNo(contactNo);
+        boolean chkAdd = v.Address(Address);
+        boolean chkCity = v.City(City);
+        boolean chkCode = v.PostalCode(postalCode);
+        boolean chkEmail = v.Email(Email);
+        boolean chkPass = v.Password(Password);
+        
+        if(chkName == true && chkNo == true && chkAdd == true && chkCity == true && chkCode == true && chkEmail == true && chkPass == true)
+        {
+            // shopping page.   
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "You have entered invalid credentials.");
+        }
+    }
+        
+        /*if(chkName == true)
+        {
+            System.out.println("true Name");
+        }
+        else
+        {
+            System.out.println("False Name");
+        }
+        
+        if(chkNo == true)
+        {
+            System.out.println("true No");
+        }
+        else
+        {
+            System.out.println("False No");
+        }
+        
+        if(chkAdd == true)
+        {
+            System.out.println("true Add");
+        }
+        else
+        {
+            System.out.println("False Add");
+        }
+        
+        if(chkCity == true)
+        {
+            System.out.println("true city");
+        }
+        else
+        {
+            System.out.println("False city");
+        }
+        
+        if(chkCode == true)
+        {
+            System.out.println("true code");
+        }
+        else
+        {
+            System.out.println("False code");
+        }/**
+    }//GEN-LAST:event_signupActionPerformed
 
     /**
      * @param args the command line arguments
