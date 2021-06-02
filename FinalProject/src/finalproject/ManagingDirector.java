@@ -9,6 +9,6 @@ package finalproject;
  *
  * @author KHADIJA
  */
-public class ManagingDirector {
+public class ManagingDirector extends Person{
     
 }

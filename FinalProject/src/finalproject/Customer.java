@@ -9,6 +9,6 @@ package finalproject;
  *
  * @author KHADIJA
  */
-public class Customer {
+public class Customer extends Person{
     
 }
