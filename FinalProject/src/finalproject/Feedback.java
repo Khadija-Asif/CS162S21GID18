@@ -35,11 +35,11 @@ public class Feedback extends javax.swing.JFrame {
         label3 = new javax.swing.JLabel();
         jSlider3 = new javax.swing.JSlider();
         label4 = new javax.swing.JLabel();
-        jSlider6 = new javax.swing.JSlider();
-        label5 = new javax.swing.JLabel();
         jSlider4 = new javax.swing.JSlider();
-        label6 = new javax.swing.JLabel();
+        label5 = new javax.swing.JLabel();
         jSlider5 = new javax.swing.JSlider();
+        label6 = new javax.swing.JLabel();
+        jSlider6 = new javax.swing.JSlider();
         jPanel2 = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
         minimize = new javax.swing.JLabel();
@@ -75,19 +75,19 @@ public class Feedback extends javax.swing.JFrame {
         label4.setForeground(new java.awt.Color(255, 255, 255));
         label4.setText("Services");
         jPanel1.add(label4, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, 80, 40));
-        jPanel1.add(jSlider6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, -1, -1));
+        jPanel1.add(jSlider4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, -1, -1));
 
         label5.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         label5.setForeground(new java.awt.Color(255, 255, 255));
         label5.setText("Shipment");
         jPanel1.add(label5, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 100, 40));
-        jPanel1.add(jSlider4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, -1, -1));
+        jPanel1.add(jSlider5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 150, -1, -1));
 
         label6.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         label6.setForeground(new java.awt.Color(255, 255, 255));
         label6.setText("Rating");
         jPanel1.add(label6, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 100, 40));
-        jPanel1.add(jSlider5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, -1, -1));
+        jPanel1.add(jSlider6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(190, 21, 88));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -108,6 +108,11 @@ public class Feedback extends javax.swing.JFrame {
         signup.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         signup.setText("Submit");
         signup.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 51), 3, true));
+        signup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signupActionPerformed(evt);
+            }
+        });
         jPanel1.add(signup, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 250, 110, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/feedback.jpg"))); // NOI18N
@@ -127,6 +132,17 @@ public class Feedback extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void signupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupActionPerformed
+        // TODO add your handling code here:
+        int quantity = jSlider1.getValue();
+        int price = jSlider2.getValue();
+        int useability = jSlider3.getValue();
+        int services = jSlider4.getValue();
+        int shipment = jSlider5.getValue();
+        int rating = jSlider6.getValue();
+        // Save feedback
+    }//GEN-LAST:event_signupActionPerformed
 
     /**
      * @param args the command line arguments
