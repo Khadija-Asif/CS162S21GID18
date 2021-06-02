@@ -155,4 +155,76 @@ public class Validator {
         }
         return flag;
     }
+    boolean ProductID(String productID)
+    {
+        boolean flag = false;
+        int length = productID.length();
+        if(length == 11)
+        {
+            if(productID.charAt(0) == 'P' && productID.charAt(1) == 'r' && productID.charAt(2) == 'o' && productID.charAt(3) == 'd' && productID.charAt(4) == 'u' && productID.charAt(5) == 'c' && productID.charAt(6) == 't')
+            {
+                if(productID.charAt(7) == '-')
+                {
+                   if(productID.charAt(9) >= '0' && productID.charAt(9) <= '9')
+                   {
+                        if(productID.charAt(10) >= '0' && productID.charAt(10) <= '9')
+                        {
+                            flag = true;
+                        }
+                        else
+                        {
+                            flag = false;
+                        }
+                   }
+                }
+            }
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Product ID must consist of 11 characters (Product-##)");
+        }
+        return flag;
+    }
+    
+    boolean ProductName(String productName) {
+        boolean flag = false;
+        int length = productName.length();
+        for (int i = 0; i < length; i++) {
+            if ((productName.charAt(i) >= 'A' && productName.charAt(i) <= 'Z') || (productName.charAt(i) >= 'a' && productName.charAt(i) <= 'z') || (productName.charAt(i) == ' ')) {
+                flag = true;
+            } else {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+    
+    boolean ProductPrice(int productPrice)
+    {
+        boolean flag = false;
+        if(productPrice >= '0' && productPrice <= '9')
+        {
+            flag = true;
+        }
+        else
+        {
+            flag = false;
+        }
+        return flag;
+    }
+    
+    boolean ProductQuantity(int productQuantity)
+    {
+        boolean flag = false;
+        if(productQuantity >= '0' && productQuantity <= '9')
+        {
+            flag = true;
+        }
+        else
+        {
+            flag = false;
+        }
+        return flag;
+    }
 }
