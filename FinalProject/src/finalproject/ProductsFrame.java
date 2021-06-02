@@ -140,7 +140,7 @@ public class ProductsFrame extends javax.swing.JFrame {
 
         jPanel3.add(MinPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 60, 60));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 0, 200, 60));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 0, 200, 60));
 
         jPanel6.setBackground(new java.awt.Color(190, 21, 88));
 
@@ -165,7 +165,7 @@ public class ProductsFrame extends javax.swing.JFrame {
 
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 30));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 60));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 60));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -303,11 +303,11 @@ public class ProductsFrame extends javax.swing.JFrame {
         jTable1.setSelectionBackground(new java.awt.Color(190, 21, 88));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 590, 770, 90));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 580, 770, 90));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/Product.jpg"))); // NOI18N
         jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 1000, 680));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 920, 680));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
