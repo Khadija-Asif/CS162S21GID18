@@ -200,32 +200,32 @@ public class DirectorLogin extends javax.swing.JFrame {
 
     private void showPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showPasswordActionPerformed
         // TODO add your handling code here:
-        if(showPassword.isSelected()){
-            password.setEchoChar((char)0);
-        }
-        else
-        {
+        if (showPassword.isSelected()) {
+            password.setEchoChar((char) 0);
+        } else {
             password.setEchoChar('*');
         }
     }//GEN-LAST:event_showPasswordActionPerformed
 
     private void signinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signinActionPerformed
         // TODO add your handling code here:
+        Person p = new Person();
+        //p.setEmailId("Khadijaasif288@gmail.com");
+        //p.setPassword("12345");
         Validator v = new Validator();
         String Email = ID.getText();
         String Password = password.getText();
+       
+            boolean chkEmail = v.Email(Email);
+            boolean chkPass = v.Password(Password);
+
+            if (chkEmail == true && chkPass == true) {
+                ProductsFrame P = new ProductsFrame();
+                P.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "You have entered invalid credentials.");
+            }
         
-        boolean chkEmail = v.Email(Email);
-        boolean chkPass = v.Password(Password);
-        
-        if(chkEmail == true && chkPass == true)
-        {
-            // frame
-        }
-        else
-        {
-            JOptionPane.showMessageDialog(null, "You have entered invalid credentials.");
-        }
     }//GEN-LAST:event_signinActionPerformed
 
     /**

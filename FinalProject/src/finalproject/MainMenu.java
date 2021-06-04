@@ -82,7 +82,7 @@ public class MainMenu extends javax.swing.JFrame {
         closePannelLayout.setHorizontalGroup(
             closePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, closePannelLayout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addComponent(CloseLabel)
                 .addContainerGap())
         );
@@ -94,7 +94,7 @@ public class MainMenu extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel3.add(closePannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 80, 60));
+        jPanel3.add(closePannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 0, 70, 60));
 
         MinPannel.setBackground(new java.awt.Color(190, 21, 88));
 
@@ -129,9 +129,9 @@ public class MainMenu extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel3.add(MinPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, -1, 60));
+        jPanel3.add(MinPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, 60));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 0, 200, 60));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 0, 190, 60));
 
         jPanel6.setBackground(new java.awt.Color(190, 21, 88));
 
@@ -156,7 +156,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 30));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 60));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1110, 60));
 
         jLabel2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(190, 21, 88));
@@ -165,7 +165,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         ManagerButton.setBackground(new java.awt.Color(190, 21, 88));
         ManagerButton.setForeground(new java.awt.Color(255, 255, 255));
-        ManagerButton.setText("Manager");
+        ManagerButton.setText("Managing Director");
         ManagerButton.setBorderPainted(false);
         ManagerButton.setDefaultCapable(false);
         ManagerButton.setFocusPainted(false);
@@ -240,9 +240,7 @@ public class MainMenu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1095, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -298,7 +296,8 @@ public class MainMenu extends javax.swing.JFrame {
 
     private void ManagerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ManagerButtonActionPerformed
         // TODO add your handling code here:
-        
+        DirectorLogin D = new DirectorLogin();
+        D.setVisible(true);
     }//GEN-LAST:event_ManagerButtonActionPerformed
 
     private void CustomerButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CustomerButtonMouseEntered

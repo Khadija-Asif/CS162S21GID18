@@ -9,13 +9,36 @@ package finalproject;
  *
  * @author KHADIJA
  */
-public class Customer extends Person {
-
+public class Customer_Director extends Person implements PersonInterface{
+    // Attributes for Director
+    private String loginID; 
+     // Attributes for Customer
     private String name;
     private String Address;
     private String CityName;
     private String PostalCode;
 
+// Function for Director
+    
+    /**
+     * Function to set ID
+     *
+     * @param ID
+     */
+    public void setID(String ID) {
+        this.loginID = ID;
+    }
+
+    /**
+     * getter function to get ID
+     *
+     * @return
+     */
+    public String getID() {
+        return this.loginID;
+    }
+
+// Function for Customer
     /**
      * Function to set Name
      *
@@ -24,7 +47,7 @@ public class Customer extends Person {
     public void setName(String Name) {
         this.name = Name;
     }
-    
+
     /**
      * Function to set Customer Address
      *
@@ -51,7 +74,7 @@ public class Customer extends Person {
     public void setCustomerPostalCode(String code) {
         this.PostalCode = code;
     }
-    
+
     /**
      * getter function to get Name
      *
@@ -60,7 +83,7 @@ public class Customer extends Person {
     public String getName() {
         return this.name;
     }
-    
+
     /**
      * Function to get Address
      *
@@ -89,15 +112,6 @@ public class Customer extends Person {
     }
 
     /**
-     * Function to get class type
-     *
-     * @return
-     */
-    public String getType() {
-        return "Customer";
-    }
-
-    /**
      * toString function
      *
      * @return
@@ -121,5 +135,9 @@ public class Customer extends Person {
         this.CityName = city;
         this.PostalCode = code;
     }
-
+    @Override
+    public String getType()
+    {
+        return  "Customer_Director";
+    }
 }
