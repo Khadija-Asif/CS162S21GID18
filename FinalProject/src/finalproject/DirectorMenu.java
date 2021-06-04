@@ -32,85 +32,77 @@ public class DirectorMenu extends javax.swing.JFrame {
         title = new javax.swing.JLabel();
         minimize = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(240, 85, 99));
+        jPanel1.setBackground(new java.awt.Color(204, 219, 216));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(190, 21, 88));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         title.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
-        title.setForeground(new java.awt.Color(255, 255, 255));
         title.setText("Director Menu");
         jPanel2.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 180, -1));
 
         minimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_minimize_window_30px.png"))); // NOI18N
-        jPanel2.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 10, 29, 33));
+        jPanel2.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, 29, 33));
 
         close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_multiply_30px_1.png"))); // NOI18N
-        jPanel2.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, -1, 33));
+        jPanel2.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 10, -1, 33));
 
-        jButton1.setBackground(new java.awt.Color(251, 175, 240));
-        jButton1.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
-        jButton1.setText("Manage Customer");
-        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 14, 86), 3, true));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 860, 50));
 
-        jButton2.setBackground(new java.awt.Color(102, 72, 71));
-        jButton2.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
-        jButton2.setText("Manage Sales");
-        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 142, 66), 3, true));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setBackground(new java.awt.Color(51, 126, 79));
+        jButton3.setBackground(new java.awt.Color(190, 21, 88));
         jButton3.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         jButton3.setText("Manage Products");
-        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 51), 3, true));
+        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 100, 210, 60));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(355, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 339, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(110, 110, 110))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(111, Short.MAX_VALUE))
-        );
+        jButton2.setBackground(new java.awt.Color(190, 21, 88));
+        jButton2.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        jButton2.setText("Manage Sales");
+        jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 210, 210, 60));
+
+        jButton1.setBackground(new java.awt.Color(190, 21, 88));
+        jButton1.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        jButton1.setText("Help");
+        jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 540, 210, 60));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/background2.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 560, 570));
+
+        jButton4.setBackground(new java.awt.Color(190, 21, 88));
+        jButton4.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        jButton4.setText("View Stock");
+        jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 430, 210, 60));
+
+        jButton5.setBackground(new java.awt.Color(190, 21, 88));
+        jButton5.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        jButton5.setText("Manage Customer");
+        jButton5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, 210, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -127,17 +119,17 @@ public class DirectorMenu extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        ProductsFrame productFr = new ProductsFrame();
+        productFr.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        SalesFrame sale = new SalesFrame();
+        sale.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,6 +171,9 @@ public class DirectorMenu extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel minimize;
