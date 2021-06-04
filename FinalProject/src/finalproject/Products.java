@@ -9,7 +9,7 @@ package finalproject;
  *
  * @author KHADIJA
  */
-public class Products extends ManagingDirector {
+public class Products extends Customer_Director implements ManagingDirectorInterface,CustomerInterface{
 
     private String ProductID;
     private String ProductName;

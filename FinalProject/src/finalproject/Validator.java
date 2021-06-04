@@ -30,11 +30,8 @@ public class Validator {
     boolean Email(String email) {
         boolean flag = true;
         int size = email.length();
-        if ((email.charAt(0) == '@') || (email.charAt(0) == '.') || (email.charAt(0) >= '0' && email.charAt(0) <= '9')) {
-            JOptionPane.showMessageDialog(null, "Invalid Email");
-            flag = false;
-        } else {
-            for (int i = 0; i <= size - 1; i++) {
+        if (!((email.charAt(0) == '@') || (email.charAt(0) == '.') || (email.charAt(0) >= '0' && email.charAt(0) <= '9'))) {
+            for (int i = 0; i < size; i++) {
                 if ((email.charAt(i) >= 'A' && email.charAt(i) <= 'Z') || (email.charAt(i) >= 'a' && email.charAt(i) <= 'z') || email.charAt(i) == '@' || email.charAt(i) == '.' || (email.charAt(i) >= '0' && email.charAt(i) <= '9')) {
                     flag = true;
                 } else {
@@ -44,6 +41,12 @@ public class Validator {
                 }
 
             }
+        } else {
+            JOptionPane.showMessageDialog(null, "Invalid Email");
+            flag = false;
+        }
+        if (flag == true) {
+            System.out.print("true");
         }
         return flag;
     }
@@ -52,7 +55,7 @@ public class Validator {
     ) {
         boolean flag = false;
         int length = password.length();
-        if (length == 8) {
+        if (length >= 8) {
             for (int i = 0; i < length; i++) {
                 if ((password.charAt(i) >= 'A' && password.charAt(i) <= 'Z') || (password.charAt(i) >= 'a' && password.charAt(i) <= 'z') || (password.charAt(i) >= '0' && password.charAt(i) <= '9') || (password.charAt(i) == '.') || (password.charAt(i) == '_')) {
                     flag = true;
@@ -61,6 +64,8 @@ public class Validator {
                     break;
                 }
             }
+        } else {
+            System.out.print("Password must contain 8 or more than 8 digits or characters");
         }
         return flag;
     }
@@ -155,37 +160,31 @@ public class Validator {
         }
         return flag;
     }
-    boolean ProductID(String productID)
-    {
+
+    boolean ProductID(String productID) {
         boolean flag = false;
         int length = productID.length();
-        if(length == 11)
-        {
-            if(productID.charAt(0) == 'P' && productID.charAt(1) == 'r' && productID.charAt(2) == 'o' && productID.charAt(3) == 'd' && productID.charAt(4) == 'u' && productID.charAt(5) == 'c' && productID.charAt(6) == 't')
-            {
-                if(productID.charAt(7) == '-')
-                {
-                   if(productID.charAt(9) >= '0' && productID.charAt(9) <= '9')
-                   {
-                        if(productID.charAt(10) >= '0' && productID.charAt(10) <= '9')
-                        {
+        if (length == 11) {
+            if (productID.charAt(0) == 'P' && productID.charAt(1) == 'r' && productID.charAt(2) == 'o' && productID.charAt(3) == 'd' && productID.charAt(4) == 'u' && productID.charAt(5) == 'c' && productID.charAt(6) == 't') {
+                if (productID.charAt(7) == '-') {
+                    if (productID.charAt(9) >= '0' && productID.charAt(9) <= '9') {
+                        if (productID.charAt(10) >= '0' && productID.charAt(10) <= '9') {
                             flag = true;
-                        }
-                        else
-                        {
+                        } else {
                             flag = false;
                         }
-                   }
+                    }
                 }
             }
+        } else {
+            JOptionPane.showMessageDialog(null, "Product ID must consist of 11 characters (Product-###)");
         }
-        else
-        {
-            JOptionPane.showMessageDialog(null, "Product ID must consist of 11 characters (Product-##)");
+        if (flag == true) {
+            System.out.println("Valid Product ID");
         }
         return flag;
     }
-    
+
     boolean ProductName(String productName) {
         boolean flag = false;
         int length = productName.length();
@@ -197,32 +196,33 @@ public class Validator {
                 break;
             }
         }
-        return flag;
-    }
-    
-    boolean ProductPrice(int productPrice)
-    {
-        boolean flag = false;
-        if(productPrice >= '0' && productPrice <= '9')
-        {
-            flag = true;
-        }
-        else
-        {
-            flag = false;
+        if (flag == true) {
+            System.out.println("Valid Product Name");
         }
         return flag;
     }
-    
-    boolean ProductQuantity(int productQuantity)
-    {
+
+    boolean ProductPrice(int productPrice) {
         boolean flag = false;
-        if(productQuantity >= '0' && productQuantity <= '9')
-        {
-            flag = true;
+        String number = String.valueOf(productPrice);
+        for (int i = 0; i < number.length(); i++) {
+            if (number.charAt(i) >= '0' &&  number.charAt(i)<= '9') {
+                flag = true;
+            } else {
+                flag = false;
+            }
         }
-        else
-        {
+        if (flag == true) {
+            System.out.println("Valid Product Price");
+        }
+        return flag;
+    }
+
+    boolean ProductQuantity(int productQuantity) {
+        boolean flag = false;
+        if (productQuantity >= '0' && productQuantity <= '9') {
+            flag = true;
+        } else {
             flag = false;
         }
         return flag;

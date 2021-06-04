@@ -9,10 +9,7 @@ package finalproject;
  *
  * @author KHADIJA
  */
-public class WishList extends Products{
-
+public interface ManagingDirectorInterface extends PersonInterface{
     @Override
-    public String getType() {
-        return "WishList";
-    }
+    public String getType();
 }

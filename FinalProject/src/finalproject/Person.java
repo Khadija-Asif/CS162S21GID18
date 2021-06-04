@@ -73,15 +73,6 @@ public class Person {
     }
 
     /**
-     * Function to get class type
-     *
-     * @return
-     */
-    public String getType() {
-        return "Person";
-    }
-
-    /**
      * toString function
      *
      * @return

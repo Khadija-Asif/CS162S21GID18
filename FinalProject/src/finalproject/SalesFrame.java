@@ -137,11 +137,11 @@ public class SalesFrame extends javax.swing.JFrame {
 
         jPanel3.add(MinPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 70, 60));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 0, 220, 60));
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, 220, 60));
 
         jPanel6.setBackground(new java.awt.Color(190, 21, 88));
 
-        jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("One-Click Pick");
 
@@ -150,14 +150,14 @@ public class SalesFrame extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 319, Short.MAX_VALUE))
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 302, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addComponent(jLabel1)
-                .addGap(0, 5, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 30));
@@ -165,31 +165,37 @@ public class SalesFrame extends javax.swing.JFrame {
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 60));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(190, 21, 88));
         jLabel2.setText("      Sales Products");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 250, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 120, 250, 40));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setForeground(new java.awt.Color(190, 21, 88));
         jLabel3.setText("Sale Percentage");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setForeground(new java.awt.Color(190, 21, 88));
         jLabel4.setText("New Price");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 270, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setForeground(new java.awt.Color(190, 21, 88));
         jLabel5.setText("Product ID");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setForeground(new java.awt.Color(190, 21, 88));
         jLabel6.setText("Sales Time Duration");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 380, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, -1, -1));
+
+        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, 230, 30));
+
+        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 230, 30));
+
+        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, 230, 30));
 
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 230, 30));
@@ -218,7 +224,7 @@ public class SalesFrame extends javax.swing.JFrame {
                 DeleteButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(DeleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 450, 150, 40));
+        jPanel1.add(DeleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 450, 150, 40));
 
         UpdateButton.setBackground(new java.awt.Color(190, 21, 88));
         UpdateButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -244,7 +250,7 @@ public class SalesFrame extends javax.swing.JFrame {
                 UpdateButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(UpdateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 450, 140, 40));
+        jPanel1.add(UpdateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, 140, 40));
 
         AddButton.setBackground(new java.awt.Color(190, 21, 88));
         AddButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -270,7 +276,7 @@ public class SalesFrame extends javax.swing.JFrame {
                 AddButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(AddButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 450, 140, 40));
+        jPanel1.add(AddButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 140, 40));
 
         jTable1.setForeground(new java.awt.Color(190, 21, 88));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -287,16 +293,18 @@ public class SalesFrame extends javax.swing.JFrame {
         jTable1.setSelectionBackground(new java.awt.Color(190, 21, 88));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 560, 900, 90));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 900, 90));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/Product.jpg"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 950, 680));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/prd.jpg"))); // NOI18N
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 920, 680));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 919, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

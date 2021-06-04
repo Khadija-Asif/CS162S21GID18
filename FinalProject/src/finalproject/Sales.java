@@ -9,6 +9,9 @@ package finalproject;
  *
  * @author KHADIJA
  */
-public class Sales extends Person{
-    
+public class Sales extends Products{
+    @Override
+    public String getType() {
+        return "Sales";
+    }
 }

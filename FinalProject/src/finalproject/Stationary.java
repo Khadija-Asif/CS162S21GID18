@@ -10,5 +10,8 @@ package finalproject;
  * @author KHADIJA
  */
 public class Stationary extends Products{
-    
+    @Override
+    public String getType() {
+        return "Stationary";
+    }
 }
