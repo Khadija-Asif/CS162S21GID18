@@ -470,8 +470,7 @@ public class ProductsFrame extends javax.swing.JFrame {
                         M.ProductsList.set(i, p);
                     }
                 }
-                for(int j = 0 ; j < M.getProductList().size();j++)
-                {
+                for (int j = 0; j < M.getProductList().size(); j++) {
                     System.out.println(M.getProductList().get(j));
                 }
                 JOptionPane.showMessageDialog(null, "Data has been updated successfully");
@@ -503,11 +502,25 @@ public class ProductsFrame extends javax.swing.JFrame {
     private void DeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteButtonActionPerformed
         // TODO add your handling code here:
         DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
+        String ID = tableModel.getValueAt(jTable1.getSelectedRow(), 0).toString();
+        String name = tableModel.getValueAt(jTable1.getSelectedRow(), 1).toString();
+        String price = tableModel.getValueAt(jTable1.getSelectedRow(), 2).toString();
+        String quantity = tableModel.getValueAt(jTable1.getSelectedRow(), 3).toString();
+        String type = tableModel.getValueAt(jTable1.getSelectedRow(), 4).toString();
         if (jTable1.getSelectedRowCount() == 1) {
             tableModel.removeRow(jTable1.getSelectedRow());
             ProductID.setText("");
             ProductName.setText("");
             ProductPrice.setText("");
+            for (int i = 0; i < M.getProductList().size(); i++) {
+                Products p = (Products) M.getProductList().get(i);
+                if (ID.equals(p.getProductID()) && type.equals(p.getProductType())) {
+                    M.getProductList().remove(i);
+                }
+            }
+            for (int j = 0; j < M.getProductList().size(); j++) {
+                System.out.println(M.getProductList().get(j));
+            }
         } else {
             if (jTable1.getSelectedRow() == 0) {
                 JOptionPane.showMessageDialog(null, "Table is Empty");

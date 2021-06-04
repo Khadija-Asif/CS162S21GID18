@@ -83,7 +83,7 @@ public class Receipt extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTable1);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 530, 90));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 530, 100));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/receipt.png"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 560, 560));
