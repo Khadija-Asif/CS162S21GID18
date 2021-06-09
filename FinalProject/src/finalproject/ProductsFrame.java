@@ -6,9 +6,11 @@
 package finalproject;
 
 import java.awt.Color;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.html.HTML;
 
 /**
  *
@@ -385,7 +387,6 @@ public class ProductsFrame extends javax.swing.JFrame {
         P.setProductName(ProductName.getText());
         int price = Integer.parseInt(ProductPrice.getText());
         P.setProductPrice(price);
-        System.out.println(P.getProductPrice());
         int quantity = Integer.parseInt(QuantityCombo.getSelectedItem().toString());
         P.setProductQuantity(quantity);
         P.setProductType(ProductType.getSelectedItem().toString());
@@ -398,6 +399,7 @@ public class ProductsFrame extends javax.swing.JFrame {
         } else {
             if (checkProductID == true && checkProductName == true && checkProductPrice == true) {
                 String data[] = {ProductID.getText(), ProductName.getText(), ProductPrice.getText(), QuantityCombo.getSelectedItem().toString(), ProductType.getSelectedItem().toString()};
+                System.out.println(data.length);
                 DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
                 tableModel.addRow(data);
                 M.add(P, P);
@@ -428,6 +430,9 @@ public class ProductsFrame extends javax.swing.JFrame {
     private void UpdateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateButtonActionPerformed
         // TODO add your handling code here:
         DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
+        JOptionPane.showMessageDialog(null, tableModel.getColumnCount());
+        JOptionPane.showMessageDialog(null, tableModel.getRowCount());
+
         if (jTable1.getSelectedRowCount() == 1) {
             Products P = new Products();
             Validator check = new Validator();
@@ -453,7 +458,6 @@ public class ProductsFrame extends javax.swing.JFrame {
                 String Productprice = ProductPrice.getText();
                 String Productquantity = QuantityCombo.getSelectedItem().toString();
                 String type = ProductType.getSelectedItem().toString();
-
                 tableModel.setValueAt(ID, jTable1.getSelectedRow(), 0);
                 tableModel.setValueAt(name, jTable1.getSelectedRow(), 1);
                 tableModel.setValueAt(Productprice, jTable1.getSelectedRow(), 2);
@@ -481,9 +485,9 @@ public class ProductsFrame extends javax.swing.JFrame {
             }
         } else {
             if (jTable1.getSelectedRowCount() == 0) {
-                JOptionPane.showMessageDialog(null, "Table is Empty");
-            } else {
                 JOptionPane.showMessageDialog(null, "You have not selected any Row or may be selected Multiple Rows");
+            } else {
+                JOptionPane.showMessageDialog(null, "Update Failed");
 
             }
         }
@@ -502,30 +506,29 @@ public class ProductsFrame extends javax.swing.JFrame {
     private void DeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteButtonActionPerformed
         // TODO add your handling code here:
         DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
-        String ID = tableModel.getValueAt(jTable1.getSelectedRow(), 0).toString();
-        String name = tableModel.getValueAt(jTable1.getSelectedRow(), 1).toString();
-        String price = tableModel.getValueAt(jTable1.getSelectedRow(), 2).toString();
-        String quantity = tableModel.getValueAt(jTable1.getSelectedRow(), 3).toString();
-        String type = tableModel.getValueAt(jTable1.getSelectedRow(), 4).toString();
         if (jTable1.getSelectedRowCount() == 1) {
-            tableModel.removeRow(jTable1.getSelectedRow());
-            ProductID.setText("");
-            ProductName.setText("");
-            ProductPrice.setText("");
-            for (int i = 0; i < M.getProductList().size(); i++) {
+
+            String ID = tableModel.getValueAt(jTable1.getSelectedRow(), 0).toString();
+            String name = tableModel.getValueAt(jTable1.getSelectedRow(), 1).toString();
+            String price = tableModel.getValueAt(jTable1.getSelectedRow(), 2).toString();
+            String quantity = tableModel.getValueAt(jTable1.getSelectedRow(), 3).toString();
+            String type = tableModel.getValueAt(jTable1.getSelectedRow(), 4).toString();
+            for (int i = 0; i < M.ProductsList.size(); i++) {
                 Products p = (Products) M.getProductList().get(i);
                 if (ID.equals(p.getProductID()) && type.equals(p.getProductType())) {
                     M.getProductList().remove(i);
                 }
             }
-            for (int j = 0; j < M.getProductList().size(); j++) {
-                System.out.println(M.getProductList().get(j));
-            }
+            tableModel.removeRow(jTable1.getSelectedRow());
+            ProductID.setText("");
+            ProductName.setText("");
+            ProductPrice.setText("");
+            JOptionPane.showMessageDialog(null, "Data has been Deleted successfully");
         } else {
             if (jTable1.getSelectedRow() == 0) {
-                JOptionPane.showMessageDialog(null, "Table is Empty");
-            } else {
                 JOptionPane.showMessageDialog(null, "You have not selected any Row or may be selected Multiple Rows");
+            } else {
+                JOptionPane.showMessageDialog(null, "Update Failed");
 
             }
         }
@@ -551,7 +554,7 @@ public class ProductsFrame extends javax.swing.JFrame {
         ProductPrice.setText(price);
         QuantityCombo.setSelectedItem(quantity);
         ProductType.setSelectedItem(type);
-        for (int i = 0; i < M.getProductList().size(); i++) {
+         for (int i = 0; i < M.getProductList().size(); i++) {
             Products p = (Products) M.getProductList().get(i);
             if (ID.equals(p.getProductID()) && type.equals(p.getProductType())) {
                 p.setProductID(" ");

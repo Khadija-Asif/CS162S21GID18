@@ -5,6 +5,9 @@
  */
 package finalproject;
 
+import java.awt.Color;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Hafsa Rashid
@@ -28,10 +31,6 @@ public class Appliances extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        title = new javax.swing.JLabel();
-        minimize = new javax.swing.JLabel();
-        close = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
@@ -82,6 +81,13 @@ public class Appliances extends javax.swing.JFrame {
         label9 = new javax.swing.JLabel();
         button9 = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        closePannel = new javax.swing.JPanel();
+        CloseLabel = new javax.swing.JLabel();
+        MinPannel = new javax.swing.JPanel();
+        MinLabel = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -90,22 +96,6 @@ public class Appliances extends javax.swing.JFrame {
         jPanel1.setMinimumSize(new java.awt.Dimension(1140, 710));
         jPanel1.setPreferredSize(new java.awt.Dimension(1063, 691));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel2.setBackground(new java.awt.Color(190, 21, 88));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        title.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
-        title.setForeground(new java.awt.Color(255, 255, 255));
-        title.setText("Appliances");
-        jPanel2.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 140, -1));
-
-        minimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_minimize_window_30px.png"))); // NOI18N
-        jPanel2.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 10, 29, 33));
-
-        close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_multiply_30px_1.png"))); // NOI18N
-        jPanel2.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 10, -1, 33));
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 50));
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -295,6 +285,83 @@ public class Appliances extends javax.swing.JFrame {
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/wallpaper6.jpg"))); // NOI18N
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 1060, 650));
 
+        jPanel2.setBackground(new java.awt.Color(190, 21, 88));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel11.setBackground(new java.awt.Color(190, 21, 88));
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        closePannel.setBackground(new java.awt.Color(190, 21, 88));
+
+        CloseLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        CloseLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_multiply_40px.png"))); // NOI18N
+        CloseLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CloseLabelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                CloseLabelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                CloseLabelMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout closePannelLayout = new javax.swing.GroupLayout(closePannel);
+        closePannel.setLayout(closePannelLayout);
+        closePannelLayout.setHorizontalGroup(
+            closePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(CloseLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+        );
+        closePannelLayout.setVerticalGroup(
+            closePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(closePannelLayout.createSequentialGroup()
+                .addComponent(CloseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
+        );
+
+        jPanel11.add(closePannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 70, 50));
+
+        MinPannel.setBackground(new java.awt.Color(190, 21, 88));
+
+        MinLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        MinLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_minimize_window_40px_1.png"))); // NOI18N
+        MinLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MinLabelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                MinLabelMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                MinLabelMouseExited(evt);
+            }
+        });
+
+        javax.swing.GroupLayout MinPannelLayout = new javax.swing.GroupLayout(MinPannel);
+        MinPannel.setLayout(MinPannelLayout);
+        MinPannelLayout.setHorizontalGroup(
+            MinPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(MinLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+        );
+        MinPannelLayout.setVerticalGroup(
+            MinPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MinPannelLayout.createSequentialGroup()
+                .addComponent(MinLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 1, Short.MAX_VALUE))
+        );
+
+        jPanel11.add(MinPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 80, 50));
+
+        jPanel2.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, 210, 50));
+
+        jLabel11.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Appliances");
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 190, 30));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 50));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -311,6 +378,38 @@ public class Appliances extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+  public void changeColor(JPanel hover, Color rand) {
+        hover.setBackground(rand);
+    }
+    private void CloseLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseLabelMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_CloseLabelMouseClicked
+
+    private void CloseLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseLabelMouseEntered
+        // TODO add your handling code here:
+        changeColor(closePannel, new Color(222, 142, 174));
+    }//GEN-LAST:event_CloseLabelMouseEntered
+
+    private void CloseLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseLabelMouseExited
+        // TODO add your handling code here:
+        changeColor(closePannel, new Color(190, 21, 88));
+    }//GEN-LAST:event_CloseLabelMouseExited
+
+    private void MinLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinLabelMouseClicked
+        // TODO add your handling code here:
+        this.setExtendedState(MainScreen.ICONIFIED);
+    }//GEN-LAST:event_MinLabelMouseClicked
+
+    private void MinLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinLabelMouseEntered
+        // TODO add your handling code here:
+        changeColor(MinPannel, new Color(222, 142, 174));
+    }//GEN-LAST:event_MinLabelMouseEntered
+
+    private void MinLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinLabelMouseExited
+        // TODO add your handling code here:
+        changeColor(MinPannel, new Color(190, 21, 88));
+    }//GEN-LAST:event_MinLabelMouseExited
 
     /**
      * @param args the command line arguments
@@ -348,6 +447,9 @@ public class Appliances extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel CloseLabel;
+    private javax.swing.JLabel MinLabel;
+    private javax.swing.JPanel MinPannel;
     private javax.swing.JButton button2;
     private javax.swing.JButton button3;
     private javax.swing.JButton button4;
@@ -356,9 +458,10 @@ public class Appliances extends javax.swing.JFrame {
     private javax.swing.JButton button7;
     private javax.swing.JButton button8;
     private javax.swing.JButton button9;
-    private javax.swing.JLabel close;
+    private javax.swing.JPanel closePannel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -369,6 +472,7 @@ public class Appliances extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -393,7 +497,6 @@ public class Appliances extends javax.swing.JFrame {
     private javax.swing.JLabel med7;
     private javax.swing.JLabel med8;
     private javax.swing.JLabel med9;
-    private javax.swing.JLabel minimize;
     private javax.swing.JLabel prd2;
     private javax.swing.JLabel prd3;
     private javax.swing.JLabel prd4;
@@ -402,6 +505,5 @@ public class Appliances extends javax.swing.JFrame {
     private javax.swing.JLabel prd7;
     private javax.swing.JLabel prd8;
     private javax.swing.JLabel prd9;
-    private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables
 }
