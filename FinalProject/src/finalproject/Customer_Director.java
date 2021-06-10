@@ -17,6 +17,11 @@ public class Customer_Director extends Person implements PersonInterface{
     private String Address;
     private String CityName;
     private String PostalCode;
+    
+    //Create objects for Product class and 
+    public Products p = new Products();
+    
+    
 
 // Function for Director
     

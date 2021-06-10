@@ -9,9 +9,6 @@ package finalproject;
  *
  * @author KHADIJA
  */
-public class Sales{
-   
-    public String getType() {
-        return "Sales";
-    }
+public class Helper extends Customer_Director implements CustomerInterface,ManagingDirectorInterface{
+    
 }

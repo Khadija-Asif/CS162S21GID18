@@ -381,18 +381,18 @@ public class ProductsFrame extends javax.swing.JFrame {
 
     private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
         // TODO add your handling code here:
-        Products P = new Products();
+        Customer_Director P = new Customer_Director();
         Validator check = new Validator();
-        P.setProductID(ProductID.getText());
-        P.setProductName(ProductName.getText());
+        P.p.setProductID(ProductID.getText());
+        P.p.setProductName(ProductName.getText());
         int price = Integer.parseInt(ProductPrice.getText());
-        P.setProductPrice(price);
+        P.p.setProductPrice(price);
         int quantity = Integer.parseInt(QuantityCombo.getSelectedItem().toString());
-        P.setProductQuantity(quantity);
-        P.setProductType(ProductType.getSelectedItem().toString());
-        boolean checkProductID = check.ProductID(P.getProductID());
-        boolean checkProductName = check.ProductName(P.getProductName());
-        boolean checkProductPrice = check.ProductPrice(P.getProductPrice());
+        P.p.setProductQuantity(quantity);
+        P.p.setProductType(ProductType.getSelectedItem().toString());
+        boolean checkProductID = check.ProductID(P.p.getProductID());
+        boolean checkProductName = check.ProductName(P.p.getProductName());
+        boolean checkProductPrice = check.ProductPrice(P.p.getProductPrice());
         if (ProductID.getText().equals("") || ProductName.getText().equals("") || ProductPrice.getText().equals("") || QuantityCombo.getSelectedItem().toString().equals("") || ProductType.getSelectedItem().toString().equals("")) {
 
             JOptionPane.showMessageDialog(null, "You have not entered all required Data");
@@ -402,9 +402,9 @@ public class ProductsFrame extends javax.swing.JFrame {
                 System.out.println(data.length);
                 DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
                 tableModel.addRow(data);
-                M.add(P, P);
+                M.add(P,P);
                 JOptionPane.showMessageDialog(null, "Your Data saved Successfully");
-                for (int i = 0; i < M.ProductsList.size(); i++) {
+                for (int i = 0; i < M.getProductList().size(); i++) {
                     System.out.println(M.getProductList().get(i));
                 }
                 ProductID.setText("");
@@ -434,24 +434,24 @@ public class ProductsFrame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, tableModel.getRowCount());
 
         if (jTable1.getSelectedRowCount() == 1) {
-            Products P = new Products();
+            Customer_Director P = new Customer_Director();
             Validator check = new Validator();
-            P.setProductID(ProductID.getText());
-            P.setProductName(ProductName.getText());
+            P.p.setProductID(ProductID.getText());
+            P.p.setProductName(ProductName.getText());
             int price = 0;
             int quantity = 0;
             try {
                 price = Integer.parseInt(ProductPrice.getText());
-                P.setProductPrice(price);
+                P.p.setProductPrice(price);
                 quantity = Integer.parseInt(QuantityCombo.getSelectedItem().toString());
-                P.setProductQuantity(quantity);
+                P.p.setProductQuantity(quantity);
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            P.setProductType(ProductType.getSelectedItem().toString());
-            boolean checkProductID = check.ProductID(P.getProductID());
-            boolean checkProductName = check.ProductName(P.getProductName());
-            boolean checkProductPrice = check.ProductPrice(P.getProductPrice());
+            P.p.setProductType(ProductType.getSelectedItem().toString());
+            boolean checkProductID = check.ProductID(P.p.getProductID());
+            boolean checkProductName = check.ProductName(P.p.getProductName());
+            boolean checkProductPrice = check.ProductPrice(P.p.getProductPrice());
             if (checkProductID == true && checkProductName == true && checkProductPrice == true) {
                 String ID = ProductID.getText();
                 String name = ProductName.getText();
@@ -464,13 +464,13 @@ public class ProductsFrame extends javax.swing.JFrame {
                 tableModel.setValueAt(Productquantity, jTable1.getSelectedRow(), 3);
                 tableModel.setValueAt(type, jTable1.getSelectedRow(), 4);
                 for (int i = 0; i < M.getProductList().size(); i++) {
-                    Products p = (Products) M.getProductList().get(i);
-                    if (p.getProductID().equals(" ")) {
-                        p.setProductID(ID);
-                        p.setProductName(name);
-                        p.setProductPrice(price);
-                        p.setProductQuantity(quantity);
-                        p.setProductType(type);
+                    Customer_Director p = (Customer_Director) M.getProductList().get(i);
+                    if (p.p.getProductID().equals(" ")) {
+                        p.p.setProductID(ID);
+                        p.p.setProductName(name);
+                        p.p.setProductPrice(price);
+                        p.p.setProductQuantity(quantity);
+                        p.p.setProductType(type);
                         M.ProductsList.set(i, p);
                     }
                 }
@@ -514,8 +514,8 @@ public class ProductsFrame extends javax.swing.JFrame {
             String quantity = tableModel.getValueAt(jTable1.getSelectedRow(), 3).toString();
             String type = tableModel.getValueAt(jTable1.getSelectedRow(), 4).toString();
             for (int i = 0; i < M.ProductsList.size(); i++) {
-                Products p = (Products) M.getProductList().get(i);
-                if (ID.equals(p.getProductID()) && type.equals(p.getProductType())) {
+                Customer_Director p = (Customer_Director) M.getProductList().get(i);
+                if (ID.equals(p.p.getProductID()) && type.equals(p.p.getProductType())) {
                     M.getProductList().remove(i);
                 }
             }
@@ -555,13 +555,13 @@ public class ProductsFrame extends javax.swing.JFrame {
         QuantityCombo.setSelectedItem(quantity);
         ProductType.setSelectedItem(type);
          for (int i = 0; i < M.getProductList().size(); i++) {
-            Products p = (Products) M.getProductList().get(i);
-            if (ID.equals(p.getProductID()) && type.equals(p.getProductType())) {
-                p.setProductID(" ");
-                p.setProductName(" ");
-                p.setProductPrice(0);
-                p.setProductQuantity(0);
-                p.setProductType(" ");
+            Customer_Director p = (Customer_Director) M.getProductList().get(i);
+            if (ID.equals(p.p.getProductID()) && type.equals(p.p.getProductType())) {
+                p.p.setProductID(" ");
+                p.p.setProductName(" ");
+                p.p.setProductPrice(0);
+                p.p.setProductQuantity(0);
+                p.p.setProductType(" ");
 
             }
         }

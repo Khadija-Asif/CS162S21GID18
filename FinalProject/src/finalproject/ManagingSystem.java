@@ -33,7 +33,8 @@ public class ManagingSystem {
     }
 
     public void add(Person p , PersonInterface P) {
-        if (P.getType().equals("Products")) {
+        
+        if (P.getType().equals("Customer_Director")) {
             ProductsList.add(p);
             System.out.println("Products");
         } else if (P.getType().equals("Sales")) {

@@ -16,8 +16,8 @@ public class FinalProject {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    CustomerHomeScreen H = new CustomerHomeScreen();
-    H.setVisible(true);
+    MainScreen M = new MainScreen();
+    M.setVisible(true);
         
 
     }

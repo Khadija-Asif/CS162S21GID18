@@ -9,7 +9,7 @@ package finalproject;
  *
  * @author KHADIJA
  */
-public class Products extends Customer_Director implements ManagingDirectorInterface,CustomerInterface{
+public class Products {
 
     private String ProductID;
     private String ProductName;
@@ -112,7 +112,7 @@ public class Products extends Customer_Director implements ManagingDirectorInter
      *
      * @return
      */
-    @Override
+   
     public String getType() {
         return "Products";
     }
