@@ -14,20 +14,27 @@ public class Sales extends Products {
     private int newPrice;
     private String timeDuration;
     private String salesPercentage;
-   public Sales()
-   {
-       
-   }
+    private String description;
+
+    public Sales() {
+
+    }
+
     //Function to set values
     public void setNewPrice(int price) {
         this.newPrice = price;
     }
+
     public void setSalesTimeDuration(String time) {
         this.timeDuration = time;
     }
 
     public void setSalesPercentage(String per) {
         this.salesPercentage = per;
+    }
+
+    public void setDes(String des) {
+        this.description = des;
     }
 
     //Function to get Values
@@ -43,7 +50,17 @@ public class Sales extends Products {
         return this.salesPercentage;
     }
 
+    public String getDesc() {
+        return this.description;
+    }
+
     public String getType() {
         return "Sales";
     }
+    @Override
+    public String toString()
+    {
+        return newPrice + timeDuration +salesPercentage +description;
+    }
+
 }

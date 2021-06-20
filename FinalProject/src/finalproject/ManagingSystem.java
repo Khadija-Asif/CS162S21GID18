@@ -5,9 +5,12 @@
  */
 package finalproject;
 
+import java.time.DayOfWeek;
+import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.ListIterator;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -44,12 +47,17 @@ public class ManagingSystem {
 
     }
 
-    public void edit(String ID) {
-        while (iter.hasNext()) {
-            if (ID.equals(iter.next())) {
-                iter.remove();
-            }
-        }
+    public void removeSales(String ID) {
+       iter = SalesList.listIterator();
+        while(iter.hasNext())
+       {
+           String s = iter.next().getProductID();
+           if(s.equals(ID))
+           {
+               iter.remove();
+           }
+       }
+       
     }
 
     /**

@@ -187,7 +187,7 @@ public class SalesFrame extends javax.swing.JFrame {
         newPrice.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
         jPanel1.add(newPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 340, 30));
 
-        SalePer.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%" }));
+        SalePer.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%" }));
         SalePer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SalePerActionPerformed(evt);
@@ -357,7 +357,6 @@ public class SalesFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
         if (jTable1.getSelectedRowCount() == 1) {
-
             String ID = tableModel.getValueAt(jTable1.getSelectedRow(), 0).toString();
             String name = tableModel.getValueAt(jTable1.getSelectedRow(), 1).toString();
             String quantity = tableModel.getValueAt(jTable1.getSelectedRow(), 2).toString();
@@ -366,12 +365,14 @@ public class SalesFrame extends javax.swing.JFrame {
             String perc = tableModel.getValueAt(jTable1.getSelectedRow(), 5).toString();
             String price = tableModel.getValueAt(jTable1.getSelectedRow(), 6).toString();
             String times = tableModel.getValueAt(jTable1.getSelectedRow(), 7).toString();
-            M.edit(ID);
+            M.removeSales(ID);
             tableModel.removeRow(jTable1.getSelectedRow());
             ProductID.setText("");
             newPrice.setText("");
             time.setText("");
+            JOptionPane.showMessageDialog(null, "Size of Linked List :" + M.SalesList.size());
             JOptionPane.showMessageDialog(null, "Data has been Deleted successfully");
+
             for (int i = 0; i < M.SalesList.size(); i++) {
                 Sales s = (Sales) (M.getSalesList().get(i));
                 JOptionPane.showMessageDialog(null, s + s.getSalesPercentage()
@@ -519,6 +520,7 @@ public class SalesFrame extends javax.swing.JFrame {
                 sales.setProductPrice(proPrice);
                 sales.setProductType(type);
                 M.addProductsSales(sales);
+
                 Sales s = (Sales) (M.getSalesList().get(0));
                 JOptionPane.showMessageDialog(null, s + s.getSalesPercentage()
                         + s.getNewPrice() + s.getSalesTimeDuration()

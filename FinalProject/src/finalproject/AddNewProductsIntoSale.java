@@ -444,7 +444,7 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
                 for (int i = 0; i < M.getSalesList().size(); i++) {
                     Sales sales = (Sales) (M.getSalesList().get(i));
                     JOptionPane.showMessageDialog(null, sales + sales.getSalesPercentage()
-                             + sales.getSalesTimeDuration()
+                            + sales.getSalesTimeDuration()
                     );
                 }
                 id.setText("");
@@ -471,6 +471,70 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
 
     private void UpdateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateButtonActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
+        if (jTable1.getSelectedRowCount() == 1) {
+            Sales sales = new Sales();
+            int p = 0;
+            try {
+                p = Integer.parseInt(price.getText());
+            } catch (Exception e) {
+            }
+            Validator check = new Validator();
+            boolean checkProductPrice = check.ProductPrice(p);
+            boolean checkProductID = check.ProductID(id.getText());
+            boolean checkProductName = check.ProductName(name.getText());
+            if (checkProductPrice == true && checkProductName == true && checkProductID == true) {
+                sales.setProductPrice(p);
+                sales.setSalesPercentage(SalePer.getSelectedItem().toString());
+                sales.setSalesTimeDuration(time.getText());
+                sales.setProductID(id.getText());
+                sales.setProductName(name.getText());
+                int quantity = Integer.parseInt(quan.getSelectedItem().toString());
+                sales.setProductQuantity(quantity);
+                sales.setProductType(type.getSelectedItem().toString());
+                for (int i = 0; i < M.SalesList.size(); i++) {
+                    Sales s = (Sales) (M.getSalesList().get(i));
+                    if (s.getProductID().equals("")) {
+                        String ID = id.getText();
+                        String proName = name.getText();
+                        String proType = type.getSelectedItem().toString();
+                        String q = quan.getSelectedItem().toString();
+                        String Productprice = price.getText();
+                        String perc = SalePer.getSelectedItem().toString();
+                        String times = time.getText();
+                        tableModel.setValueAt(ID, jTable1.getSelectedRow(), 0);
+                        tableModel.setValueAt(proName, jTable1.getSelectedRow(), 1);
+                        tableModel.setValueAt(proType, jTable1.getSelectedRow(), 2);
+                        tableModel.setValueAt(q, jTable1.getSelectedRow(), 3);
+                        tableModel.setValueAt(Productprice, jTable1.getSelectedRow(), 4);
+                        tableModel.setValueAt(perc, jTable1.getSelectedRow(), 5);
+                        tableModel.setValueAt(times, jTable1.getSelectedRow(), 6);
+                        M.SalesList.set(i, sales);
+                    }
+                }
+
+                JOptionPane.showMessageDialog(null, "Data has been updated successfully");
+                for (int i = 0; i < M.SalesList.size(); i++) {
+                    Sales s = (Sales) (M.getSalesList().get(i));
+                    JOptionPane.showMessageDialog(null, s + s.getSalesPercentage()
+                            + s.getNewPrice() + s.getSalesTimeDuration()
+                    );
+                }
+                id.setText("");
+                name.setText("");
+                time.setText("");
+                desc.setText("");
+                price.setText("");
+
+            }
+        } else {
+            if (jTable1.getSelectedRowCount() == 0) {
+                JOptionPane.showMessageDialog(null, "You have not selected any Row or may be selected Multiple Rows");
+            } else {
+                JOptionPane.showMessageDialog(null, "Update Failed");
+
+            }
+        }
 
 
     }//GEN-LAST:event_UpdateButtonActionPerformed
@@ -492,8 +556,31 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
     }//GEN-LAST:event_DeleteButtonActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
-        // TODO add your handling code here:
-
+        DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
+        String ID = tableModel.getValueAt(jTable1.getSelectedRow(), 0).toString();
+        String proName = tableModel.getValueAt(jTable1.getSelectedRow(), 1).toString();
+        String proType = tableModel.getValueAt(jTable1.getSelectedRow(), 2).toString();
+        String quantity = tableModel.getValueAt(jTable1.getSelectedRow(), 3).toString();
+        String proPrice = tableModel.getValueAt(jTable1.getSelectedRow(), 4).toString();
+        String per = tableModel.getValueAt(jTable1.getSelectedRow(), 5).toString();
+        String saleTime = tableModel.getValueAt(jTable1.getSelectedRow(), 6).toString();
+        //to set Data into the fields
+        id.setText(ID);
+        name.setText(proName);
+        type.setSelectedItem(proType);
+        quan.setSelectedItem(quantity);
+        price.setText(proPrice);
+        SalePer.setSelectedItem(per);
+        time.setText(saleTime);
+        for (int i = 0; i < M.getSalesList().size(); i++) {
+            Sales s = (Sales) (M.getSalesList().get(i));
+            if (ID.equals(s.getProductID())) {
+                s.setProductID("");
+                s.setNewPrice(0);
+                s.setSalesPercentage("");
+                s.setSalesTimeDuration("");
+            }
+        }
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void quanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanActionPerformed
