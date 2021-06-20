@@ -65,6 +65,11 @@ public class DirectorMenu extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         jButton3.setText("Manage Products");
         jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jButton3.setFocusPainted(false);
+        jButton3.setFocusable(false);
+        jButton3.setRequestFocusEnabled(false);
+        jButton3.setRolloverEnabled(false);
+        jButton3.setVerifyInputWhenFocusTarget(false);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -76,6 +81,11 @@ public class DirectorMenu extends javax.swing.JFrame {
         jButton2.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         jButton2.setText("Manage Sales");
         jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jButton2.setFocusPainted(false);
+        jButton2.setFocusable(false);
+        jButton2.setRequestFocusEnabled(false);
+        jButton2.setRolloverEnabled(false);
+        jButton2.setVerifyInputWhenFocusTarget(false);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -87,6 +97,11 @@ public class DirectorMenu extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         jButton1.setText("Help");
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jButton1.setFocusPainted(false);
+        jButton1.setFocusable(false);
+        jButton1.setRequestFocusEnabled(false);
+        jButton1.setRolloverEnabled(false);
+        jButton1.setVerifyInputWhenFocusTarget(false);
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 540, 210, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/background2.jpg"))); // NOI18N
@@ -96,12 +111,20 @@ public class DirectorMenu extends javax.swing.JFrame {
         jButton4.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         jButton4.setText("View Stock");
         jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jButton4.setFocusable(false);
+        jButton4.setRequestFocusEnabled(false);
+        jButton4.setRolloverEnabled(false);
+        jButton4.setVerifyInputWhenFocusTarget(false);
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 430, 210, 60));
 
         jButton5.setBackground(new java.awt.Color(190, 21, 88));
         jButton5.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         jButton5.setText("Manage Customer");
         jButton5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jButton5.setFocusPainted(false);
+        jButton5.setRequestFocusEnabled(false);
+        jButton5.setRolloverEnabled(false);
+        jButton5.setVerifyInputWhenFocusTarget(false);
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, 210, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -127,8 +150,8 @@ public class DirectorMenu extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        SalesFrame sale = new SalesFrame();
-        sale.setVisible(true);
+        Director_Option Od = new Director_Option();
+        Od.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**

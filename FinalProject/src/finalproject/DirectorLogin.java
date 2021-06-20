@@ -210,8 +210,6 @@ public class DirectorLogin extends javax.swing.JFrame {
     private void signinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signinActionPerformed
         // TODO add your handling code here:
         Person p = new Person();
-        //p.setEmailId("Khadijaasif288@gmail.com");
-        //p.setPassword("12345");
         Validator v = new Validator();
         String Email = ID.getText();
         String Password = password.getText();
@@ -220,8 +218,8 @@ public class DirectorLogin extends javax.swing.JFrame {
             boolean chkPass = v.Password(Password);
 
             if (chkEmail == true && chkPass == true) {
-                ProductsFrame P = new ProductsFrame();
-                P.setVisible(true);
+               DirectorMenu M = new DirectorMenu();
+               M.setVisible(true);
             } else {
                 JOptionPane.showMessageDialog(null, "You have entered invalid credentials.");
             }

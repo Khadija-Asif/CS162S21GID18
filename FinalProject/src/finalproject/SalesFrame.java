@@ -6,10 +6,14 @@
 package finalproject;
 
 import java.awt.Color;
+import java.sql.JDBCType;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
- *\
+ * \
+ *
  * @author KHADIJA
  */
 public class SalesFrame extends javax.swing.JFrame {
@@ -44,15 +48,15 @@ public class SalesFrame extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        ProductID = new javax.swing.JTextField();
+        newPrice = new javax.swing.JTextField();
+        SalePer = new javax.swing.JComboBox<>();
         DeleteButton = new javax.swing.JButton();
         UpdateButton = new javax.swing.JButton();
         AddButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        time = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -87,17 +91,11 @@ public class SalesFrame extends javax.swing.JFrame {
         closePannel.setLayout(closePannelLayout);
         closePannelLayout.setHorizontalGroup(
             closePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, closePannelLayout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
-                .addComponent(CloseLabel)
-                .addContainerGap())
+            .addComponent(CloseLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
         closePannelLayout.setVerticalGroup(
             closePannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(closePannelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(CloseLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(CloseLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         jPanel3.add(closePannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, 70, 60));
@@ -122,17 +120,11 @@ public class SalesFrame extends javax.swing.JFrame {
         MinPannel.setLayout(MinPannelLayout);
         MinPannelLayout.setHorizontalGroup(
             MinPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MinPannelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(MinLabel)
-                .addContainerGap())
+            .addComponent(MinLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
         );
         MinPannelLayout.setVerticalGroup(
             MinPannelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(MinPannelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(MinLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(MinLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 60, Short.MAX_VALUE)
         );
 
         jPanel3.add(MinPannel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 70, 60));
@@ -151,7 +143,7 @@ public class SalesFrame extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 302, Short.MAX_VALUE))
+                .addGap(0, 88, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,45 +152,48 @@ public class SalesFrame extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 30));
+        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 270, 30));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 60));
 
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(190, 21, 88));
         jLabel2.setText("      Sales Products");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 120, 250, 40));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 250, 40));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(190, 21, 88));
         jLabel3.setText("Sale Percentage");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 320, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(190, 21, 88));
         jLabel4.setText("New Price");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(190, 21, 88));
         jLabel5.setText("Product ID");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 220, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(190, 21, 88));
         jLabel6.setText("Sales Time Duration");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 380, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, -1, -1));
 
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, 230, 30));
+        ProductID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
+        jPanel1.add(ProductID, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 340, 30));
 
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 270, 230, 30));
+        newPrice.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
+        jPanel1.add(newPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 340, 30));
 
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 380, 230, 30));
-
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 320, 230, 30));
+        SalePer.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%" }));
+        SalePer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalePerActionPerformed(evt);
+            }
+        });
+        jPanel1.add(SalePer, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 340, 30));
 
         DeleteButton.setBackground(new java.awt.Color(190, 21, 88));
         DeleteButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -281,30 +276,31 @@ public class SalesFrame extends javax.swing.JFrame {
         jTable1.setForeground(new java.awt.Color(190, 21, 88));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "Product ID", "Name", "Quantity", "Price Before Sale", "Type", "Sale Percentage", "New Price", "Sale Time"
             }
         ));
         jTable1.setSelectionBackground(new java.awt.Color(190, 21, 88));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 900, 90));
+        jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 370, 340, 30));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/prd.jpg"))); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/2.jpg"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 920, 680));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 919, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 919, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -314,10 +310,9 @@ public class SalesFrame extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-  public void changeColor(JPanel hover, Color rand)
-     {
-         hover.setBackground(rand);
-     }
+  public void changeColor(JPanel hover, Color rand) {
+        hover.setBackground(rand);
+    }
     private void CloseLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseLabelMouseClicked
         // TODO add your handling code here:
         this.setVisible(false);
@@ -330,7 +325,7 @@ public class SalesFrame extends javax.swing.JFrame {
 
     private void CloseLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CloseLabelMouseExited
         // TODO add your handling code here:
-        changeColor(closePannel, new Color(190,21,88));
+        changeColor(closePannel, new Color(190, 21, 88));
     }//GEN-LAST:event_CloseLabelMouseExited
 
     private void MinLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinLabelMouseClicked
@@ -345,7 +340,7 @@ public class SalesFrame extends javax.swing.JFrame {
 
     private void MinLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MinLabelMouseExited
         // TODO add your handling code here:
-        changeColor(MinPannel, new Color(190,21,88));
+        changeColor(MinPannel, new Color(190, 21, 88));
     }//GEN-LAST:event_MinLabelMouseExited
 
     private void DeleteButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteButtonMouseEntered
@@ -355,11 +350,44 @@ public class SalesFrame extends javax.swing.JFrame {
 
     private void DeleteButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DeleteButtonMouseExited
         // TODO add your handling code here:
-        DeleteButton.setBackground(new Color(190,21,88));
+        DeleteButton.setBackground(new Color(190, 21, 88));
     }//GEN-LAST:event_DeleteButtonMouseExited
 
     private void DeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteButtonActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
+        if (jTable1.getSelectedRowCount() == 1) {
+
+            String ID = tableModel.getValueAt(jTable1.getSelectedRow(), 0).toString();
+            String name = tableModel.getValueAt(jTable1.getSelectedRow(), 1).toString();
+            String quantity = tableModel.getValueAt(jTable1.getSelectedRow(), 2).toString();
+            String firstprice = tableModel.getValueAt(jTable1.getSelectedRow(), 3).toString();
+            String type = tableModel.getValueAt(jTable1.getSelectedRow(), 4).toString();
+            String perc = tableModel.getValueAt(jTable1.getSelectedRow(), 5).toString();
+            String price = tableModel.getValueAt(jTable1.getSelectedRow(), 6).toString();
+            String times = tableModel.getValueAt(jTable1.getSelectedRow(), 7).toString();
+            M.edit(ID);
+            tableModel.removeRow(jTable1.getSelectedRow());
+            ProductID.setText("");
+            newPrice.setText("");
+            time.setText("");
+            JOptionPane.showMessageDialog(null, "Data has been Deleted successfully");
+            for (int i = 0; i < M.SalesList.size(); i++) {
+                Sales s = (Sales) (M.getSalesList().get(i));
+                JOptionPane.showMessageDialog(null, s + s.getSalesPercentage()
+                        + s.getNewPrice() + s.getSalesTimeDuration()
+                );
+            }
+        } else {
+            if (jTable1.getSelectedRow() == 0) {
+                JOptionPane.showMessageDialog(null, "You have not selected any Row or may be selected Multiple Rows");
+            } else {
+                JOptionPane.showMessageDialog(null, "Delete action Failed");
+
+            }
+        }
+
+
     }//GEN-LAST:event_DeleteButtonActionPerformed
 
     private void UpdateButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UpdateButtonMouseEntered
@@ -369,11 +397,74 @@ public class SalesFrame extends javax.swing.JFrame {
 
     private void UpdateButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UpdateButtonMouseExited
         // TODO add your handling code here:
-        UpdateButton.setBackground(new Color(190,21,88));
+        UpdateButton.setBackground(new Color(190, 21, 88));
     }//GEN-LAST:event_UpdateButtonMouseExited
 
     private void UpdateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateButtonActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
+        if (jTable1.getSelectedRowCount() == 1) {
+            Sales sales = new Sales();
+            Validator check = new Validator();
+            int p = Integer.parseInt(newPrice.getText());
+            sales.setNewPrice(p);
+            sales.setSalesPercentage(SalePer.getSelectedItem().toString());
+            sales.setSalesTimeDuration(time.getText());
+            boolean checkProductPrice = check.ProductPrice(sales.getNewPrice());
+            if (checkProductPrice == true) {
+                for (int i = 0; i < M.SalesList.size(); i++) {
+                    Sales s = (Sales) (M.getSalesList().get(i));
+                    if (s.getSalesPercentage().equals("")) {
+                        String ID = ProductID.getText();
+                        String Productprice = newPrice.getText();
+                        String perc = SalePer.getSelectedItem().toString();
+                        String times = time.getText();
+                        tableModel.setValueAt(ID, jTable1.getSelectedRow(), 0);
+                        tableModel.setValueAt(s.getProductName(), jTable1.getSelectedRow(), 1);
+                        tableModel.setValueAt(s.getProductQuantity(), jTable1.getSelectedRow(), 2);
+                        tableModel.setValueAt(s.getProductPrice(), jTable1.getSelectedRow(), 3);
+                        tableModel.setValueAt(s.getProductType(), jTable1.getSelectedRow(), 4);
+                        tableModel.setValueAt(perc, jTable1.getSelectedRow(), 5);
+                        tableModel.setValueAt(Productprice, jTable1.getSelectedRow(), 6);
+                        tableModel.setValueAt(times, jTable1.getSelectedRow(), 7);
+                        sales.setProductID(ID);
+                        sales.setProductName(s.getProductName());
+                        sales.setProductPrice(s.getProductPrice());
+                        sales.setProductQuantity(s.getProductQuantity());
+                        sales.setProductType(s.getProductType());
+                        int price = Integer.parseInt(newPrice.getText());
+                        sales.setNewPrice(price);
+                        sales.setSalesPercentage(SalePer.getSelectedItem().toString());
+                        sales.setSalesTimeDuration(time.getText());
+                        JOptionPane.showMessageDialog(null, sales.getNewPrice());
+                        JOptionPane.showMessageDialog(null, sales.getSalesPercentage());
+                        JOptionPane.showMessageDialog(null, sales.getSalesTimeDuration());
+                        M.SalesList.set(i, sales);
+                    }
+                }
+
+                JOptionPane.showMessageDialog(null, "Data has been updated successfully");
+                for (int i = 0; i < M.SalesList.size(); i++) {
+                    Sales s = (Sales) (M.getSalesList().get(i));
+                    JOptionPane.showMessageDialog(null, s + s.getSalesPercentage()
+                            + s.getNewPrice() + s.getSalesTimeDuration()
+                    );
+                }
+                ProductID.setText("");
+                newPrice.setText("");
+                time.setText("");
+
+            }
+        } else {
+            if (jTable1.getSelectedRowCount() == 0) {
+                JOptionPane.showMessageDialog(null, "You have not selected any Row or may be selected Multiple Rows");
+            } else {
+                JOptionPane.showMessageDialog(null, "Update Failed");
+
+            }
+        }
+
+
     }//GEN-LAST:event_UpdateButtonActionPerformed
 
     private void AddButtonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddButtonMouseEntered
@@ -383,57 +474,106 @@ public class SalesFrame extends javax.swing.JFrame {
 
     private void AddButtonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AddButtonMouseExited
         // TODO add your handling code here:
-        AddButton.setBackground(new Color(190,21,88));
+        AddButton.setBackground(new Color(190, 21, 88));
     }//GEN-LAST:event_AddButtonMouseExited
 
     private void AddButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddButtonActionPerformed
         // TODO add your handling code here:
+        Sales sales = new Sales();
+        Validator check = new Validator();
+        sales.setProductID(ProductID.getText());
+        int price = Integer.parseInt((newPrice.getText()));
+        sales.setNewPrice(price);
+        sales.setSalesPercentage(SalePer.getSelectedItem().toString());
+        sales.setSalesTimeDuration(time.getText());
+
+        boolean checkProductID = check.ProductID(sales.getProductID());
+
+        boolean checkProductPrice = check.ProductPrice(sales.getNewPrice());
+        if (ProductID.getText().equals("") || newPrice.getText().equals("") || SalePer.getSelectedItem().toString().equals("") || sales.getSalesPercentage().equals("") || sales.getSalesTimeDuration().equals("")) {
+            JOptionPane.showMessageDialog(null, "You have not entered all required Data");
+        } else {
+            String name = "";
+            int quan = 0;
+            int proPrice = 0;
+            String type = "";
+            if (checkProductID == true && checkProductPrice == true) {
+                for (int i = 0; i < Customer_Director.prod.size(); i++) {
+
+                    if (ProductID.getText().equals(Customer_Director.prod.get(i).getProductID())) {
+                        name = Customer_Director.prod.get(i).getProductName();
+                        quan = Customer_Director.prod.get(i).getProductQuantity();
+                        proPrice = Customer_Director.prod.get(i).getProductPrice();
+                        type = Customer_Director.prod.get(i).getProductType();
+                        String priceProduct = Integer.toString(Customer_Director.prod.get(i).getProductPrice());
+                        String productQuan = Integer.toString(Customer_Director.prod.get(i).getProductQuantity());
+                        String data[] = {ProductID.getText(), Customer_Director.prod.get(i).getProductName(), productQuan, priceProduct,
+                            Customer_Director.prod.get(i).getProductType(), SalePer.getSelectedItem().toString(), newPrice.getText(), sales.getSalesTimeDuration()};
+                        DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
+                        tableModel.addRow(data);
+                        sales.getProductName();
+                    }
+                }
+                sales.setProductName(name);
+                sales.setProductQuantity(quan);
+                sales.setProductPrice(proPrice);
+                sales.setProductType(type);
+                M.addProductsSales(sales);
+                Sales s = (Sales) (M.getSalesList().get(0));
+                JOptionPane.showMessageDialog(null, s + s.getSalesPercentage()
+                        + s.getNewPrice() + s.getSalesTimeDuration()
+                );
+                ProductID.setText("");
+                time.setText("");
+            } else {
+                System.out.println("Products Invalid");
+            }
+        }
+
     }//GEN-LAST:event_AddButtonActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
+    private void SalePerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalePerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SalePerActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
+        String ID = tableModel.getValueAt(jTable1.getSelectedRow(), 0).toString();
+        String name = tableModel.getValueAt(jTable1.getSelectedRow(), 1).toString();
+        String price = tableModel.getValueAt(jTable1.getSelectedRow(), 2).toString();
+        String quantity = tableModel.getValueAt(jTable1.getSelectedRow(), 3).toString();
+        String type = tableModel.getValueAt(jTable1.getSelectedRow(), 4).toString();
+        String per = tableModel.getValueAt(jTable1.getSelectedRow(), 5).toString();
+        String prices = tableModel.getValueAt(jTable1.getSelectedRow(), 6).toString();
+        String saletime = tableModel.getValueAt(jTable1.getSelectedRow(), 7).toString();
+
+        //to set Data into the fields
+        ProductID.setText(ID);
+        newPrice.setText(prices);
+        time.setText(saletime);
+
+        for (int i = 0; i < M.getSalesList().size(); i++) {
+            Sales s = (Sales) (M.getSalesList().get(i));
+            if (ID.equals(s.getProductID())) {
+                s.setNewPrice(0);
+                s.setSalesPercentage("");
+                s.setSalesTimeDuration("");
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SalesFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SalesFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SalesFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SalesFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
+    }//GEN-LAST:event_jTable1MouseClicked
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SalesFrame().setVisible(true);
-            }
-        });
-    }
-
+    ManagingSystem M = ManagingSystem.getInstance();
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddButton;
     private javax.swing.JLabel CloseLabel;
     private javax.swing.JButton DeleteButton;
     private javax.swing.JLabel MinLabel;
     private javax.swing.JPanel MinPannel;
+    private javax.swing.JTextField ProductID;
+    private javax.swing.JComboBox<String> SalePer;
     private javax.swing.JButton UpdateButton;
     private javax.swing.JPanel closePannel;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -447,8 +587,7 @@ public class SalesFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField newPrice;
+    private javax.swing.JTextField time;
     // End of variables declaration//GEN-END:variables
 }

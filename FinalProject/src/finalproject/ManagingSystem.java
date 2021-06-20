@@ -6,7 +6,8 @@
 package finalproject;
 
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
+import java.util.LinkedList;
+import java.util.ListIterator;
 
 /**
  *
@@ -15,8 +16,9 @@ import javax.swing.JOptionPane;
 public class ManagingSystem {
 
     public static ArrayList<Person> Customer_Information_List = new ArrayList<Person>();
-    public static ArrayList<Person> ProductsList = new ArrayList<Person>();
-    public static ArrayList<Person> SalesList = new ArrayList<Person>();
+    public static ArrayList<Products> productList = new ArrayList<Products>();
+    public static LinkedList<Products> SalesList = new LinkedList<Products>();
+    public static ListIterator<Products> iter = SalesList.listIterator();
     public static ArrayList<Person> ReceiptList = new ArrayList<Person>();
     private static ManagingSystem smpl;
 
@@ -32,16 +34,21 @@ public class ManagingSystem {
         return smpl;
     }
 
-    public void add(Person p , PersonInterface P) {
-        
-        if (P.getType().equals("Customer_Director")) {
-            ProductsList.add(p);
-            System.out.println("Products");
-        } else if (P.getType().equals("Sales")) {
-            SalesList.add(p);
-            System.out.println("Sales");
-        } else {
-            JOptionPane.showMessageDialog(null, "Error");
+    public void add(Products pro, Customer_Director c) {
+        c.add(pro);
+    }
+
+    public void addProductsSales(Products pro) {
+        Customer_Director c = new Customer_Director();
+        c.addSales(SalesList, pro);
+
+    }
+
+    public void edit(String ID) {
+        while (iter.hasNext()) {
+            if (ID.equals(iter.next())) {
+                iter.remove();
+            }
         }
     }
 
@@ -55,21 +62,20 @@ public class ManagingSystem {
     }
 
     /**
-     * Function to get Product List
-     *
-     * @return
-     */
-    public ArrayList<Person> getProductList() {
-        return ProductsList;
-    }
-
-    /**
      * Function to get Sales List
      *
      * @return
      */
-    public ArrayList<Person> getSalesList() {
+    public LinkedList<Products> getSalesList() {
         return SalesList;
+    }
+
+    public ListIterator<Products> getListIterator() {
+        return iter;
+    }
+
+    public void setListIterator(ListIterator<Products> list) {
+        iter = list;
     }
 
     /**
@@ -85,28 +91,21 @@ public class ManagingSystem {
      * @param list
      */
     public void setCustomerInformationList(ArrayList<Person> list) {
-        list = this.Customer_Information_List;
+        Customer_Information_List = list;
     }
 
     /**
      * @param list
      */
-    public void setProductList(ArrayList<Person> list) {
-        list = this.ProductsList;
-    }
-
-    /**
-     * @param list
-     */
-    public void setSalesList(ArrayList<Person> list) {
-        list = this.SalesList;
+    public void setSalesList(LinkedList<Products> list) {
+        SalesList = list;
     }
 
     /**
      * @param list
      */
     public void setReceiptList(ArrayList<Person> list) {
-        list = this.ReceiptList;
+        ReceiptList = list;
     }
 
 }

@@ -30,6 +30,7 @@ public class Appliances extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel10 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -80,7 +81,6 @@ public class Appliances extends javax.swing.JFrame {
         med9 = new javax.swing.JLabel();
         label9 = new javax.swing.JLabel();
         button9 = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         closePannel = new javax.swing.JPanel();
@@ -88,6 +88,8 @@ public class Appliances extends javax.swing.JFrame {
         MinPannel = new javax.swing.JPanel();
         MinLabel = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/wallpaper6.jpg"))); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -281,9 +283,6 @@ public class Appliances extends javax.swing.JFrame {
         button9.setBackground(new java.awt.Color(204, 204, 255));
         button9.setText("Add to cart");
         jPanel1.add(button9, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 640, 100, 20));
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/wallpaper6.jpg"))); // NOI18N
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 1060, 650));
 
         jPanel2.setBackground(new java.awt.Color(190, 21, 88));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

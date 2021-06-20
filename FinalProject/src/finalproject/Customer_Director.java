@@ -5,26 +5,30 @@
  */
 package finalproject;
 
+
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author KHADIJA
  */
-public class Customer_Director extends Person implements PersonInterface{
+public class Customer_Director extends Person implements PersonInterface {
+
     // Attributes for Director
-    private String loginID; 
-     // Attributes for Customer
+    private String loginID;
+    // Attributes for Customer
     private String name;
     private String Address;
     private String CityName;
     private String PostalCode;
-    
+
     //Create objects for Product class and 
-    public Products p = new Products();
-    
-    
+    static ArrayList<Products> prod = new ArrayList<Products>();
 
 // Function for Director
-    
     /**
      * Function to set ID
      *
@@ -140,9 +144,30 @@ public class Customer_Director extends Person implements PersonInterface{
         this.CityName = city;
         this.PostalCode = code;
     }
-    @Override
-    public String getType()
+
+    //Add Function For products
+    public void add(Products pro)
     {
-        return  "Customer_Director";
+        
+        if (pro.getType().equals("Products")) {
+            prod.add(pro);
+            System.out.println("Products");
+        } else {
+            JOptionPane.showMessageDialog(null, "Error");
+        }
+    }
+    //Function to add sales for Sales
+    public void addSales(LinkedList<Products> list , Products pro )
+    {
+        if(pro.getType().equals("Sales"))
+        {
+            System.out.println("Sales");
+            list.add(pro);
+        }
+    }
+
+    @Override
+    public String getType() {
+        return "Customer_Director";
     }
 }
