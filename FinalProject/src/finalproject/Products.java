@@ -124,7 +124,7 @@ public class Products {
      */
     @Override
     public String toString() {
-        return this.ProductID + this.ProductName + this.ProductPrice + this.ProductQuantity + this.ProductType;
+        return "Product ID: " + this.ProductID + "\n" +"Product Name:"+this.ProductName + "\n" +"Product Price: " + this.ProductPrice + "\n" +"Product Quantity: "+ this.ProductQuantity + "\n" +"Product Price: " + this.ProductType + "\n";
     }
 
     /**

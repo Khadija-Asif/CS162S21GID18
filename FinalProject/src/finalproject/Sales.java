@@ -60,7 +60,6 @@ public class Sales extends Products {
     @Override
     public String toString()
     {
-        return newPrice + timeDuration +salesPercentage +description;
+        return super.toString()+"New Price: "+this.newPrice +"\n"+"Time Duration: "+ timeDuration +"\n"+"Sales Percentage: " +salesPercentage+"\n"+"Description: " +description;
     }
-
 }

@@ -64,6 +64,8 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
         desc = new javax.swing.JTextArea();
         type = new javax.swing.JComboBox<>();
         quan = new javax.swing.JComboBox<>();
+        jLabel12 = new javax.swing.JLabel();
+        priceOrg = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -166,7 +168,7 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(190, 21, 88));
         jLabel2.setText("      Sales Products");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 250, 40));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 90, 250, 40));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(190, 21, 88));
@@ -175,24 +177,29 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(190, 21, 88));
-        jLabel4.setText("Price");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 340, -1, -1));
+        jLabel4.setText("New Price");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(190, 21, 88));
         jLabel3.setText("Sale Percentage");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 390, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(190, 21, 88));
         jLabel6.setText("Sales Time Duration");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 430, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 440, -1, -1));
 
         name.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
-        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 340, 30));
+        jPanel1.add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, 340, 30));
 
         price.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
-        jPanel1.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 340, 340, 30));
+        price.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                priceActionPerformed(evt);
+            }
+        });
+        jPanel1.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 360, 340, 30));
 
         SalePer.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%" }));
         SalePer.addActionListener(new java.awt.event.ActionListener() {
@@ -200,10 +207,10 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
                 SalePerActionPerformed(evt);
             }
         });
-        jPanel1.add(SalePer, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 380, 340, 30));
+        jPanel1.add(SalePer, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 400, 340, 30));
 
         time.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
-        jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, 340, 30));
+        jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 440, 340, 30));
 
         AddButton.setBackground(new java.awt.Color(190, 21, 88));
         AddButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -289,7 +296,7 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Product ID", "Name", "Quantity", "Price", "Type", "Sale Percentage", "Sale Time"
+                "Product ID", "Name", "Quantity", "Original Price", "Sale Price", "Type", "Sale Percentage", "Sale Time"
             }
         ));
         jTable1.setSelectionBackground(new java.awt.Color(190, 21, 88));
@@ -300,7 +307,7 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
         if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(6).setResizable(false);
+            jTable1.getColumnModel().getColumn(7).setResizable(false);
         }
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 610, 900, 90));
@@ -308,17 +315,17 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(190, 21, 88));
         jLabel7.setText("Name");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(190, 21, 88));
         jLabel8.setText("Quantity");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 300, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(190, 21, 88));
         jLabel9.setText("Type");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 240, -1, -1));
 
         id.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
         jPanel1.add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 150, 340, 30));
@@ -326,17 +333,17 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(190, 21, 88));
         jLabel10.setText("Description");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 470, -1, 30));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 480, -1, 30));
 
         desc.setColumns(20);
         desc.setRows(5);
         jScrollPane2.setViewportView(desc);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 470, 340, 50));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 480, 340, 50));
 
         type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Grocery", "Dresses", "Books", "Stationary", "Pharmacy", "Home Appliances", "" }));
         type.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
-        jPanel1.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 340, 30));
+        jPanel1.add(type, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 340, 30));
 
         quan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
         quan.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
@@ -346,7 +353,15 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
                 quanActionPerformed(evt);
             }
         });
-        jPanel1.add(quan, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 340, 30));
+        jPanel1.add(quan, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, 340, 30));
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(190, 21, 88));
+        jLabel12.setText("Price");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
+
+        priceOrg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
+        jPanel1.add(priceOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 340, 30));
 
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/2.jpg"))); // NOI18N
         jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 920, 660));
@@ -421,11 +436,13 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
         s.setProductType(type.getSelectedItem().toString());
         int quantity = Integer.parseInt(quan.getSelectedItem().toString());
         s.setProductQuantity(quantity);
-        int p = Integer.parseInt(price.getText());
+        int p = Integer.parseInt(priceOrg.getText());
         s.setProductPrice(p);
         s.setSalesPercentage(SalePer.getSelectedItem().toString());
         s.setSalesTimeDuration(time.getText());
         s.setDes(desc.getText());
+        int salesPrice = Integer.parseInt(price.getText());
+        s.setNewPrice(salesPrice);
         boolean checkProductID = check.ProductID(s.getProductID());
         boolean checkProductName = check.ProductName(s.getProductName());
         boolean checkProductPrice = check.ProductPrice(s.getProductPrice());
@@ -435,23 +452,23 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "You have not entered all required Data");
         } else {
             if (checkProductID == true && checkProductName == true && checkProductPrice == true) {
-                String data[] = {id.getText(), name.getText(), quan.getSelectedItem().toString(), price.getText(), type.getSelectedItem().toString(),
+                String data[] = {id.getText(), name.getText(), quan.getSelectedItem().toString(), priceOrg.getText(), price.getText(), type.getSelectedItem().toString(),
                     SalePer.getSelectedItem().toString(), time.getText()};
                 DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
                 tableModel.addRow(data);
                 M.addProductsSales(s);
                 JOptionPane.showMessageDialog(null, "Your Data saved Successfully");
-                for (int i = 0; i < M.getSalesList().size(); i++) {
-                    Sales sales = (Sales) (M.getSalesList().get(i));
-                    JOptionPane.showMessageDialog(null, sales + sales.getSalesPercentage()
-                            + sales.getSalesTimeDuration()
-                    );
+                for (int i = 0; i < M.SalesList.size(); i++) {
+
+                    JOptionPane.showMessageDialog(null, M.getSalesList().get(i));
+
                 }
                 id.setText("");
                 name.setText("");
-                price.setText("");
+                priceOrg.setText("");
                 desc.setText("");
                 time.setText("");
+                price.setText("");
             } else {
                 System.out.println("Products Invalid");
             }
@@ -475,8 +492,11 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
         if (jTable1.getSelectedRowCount() == 1) {
             Sales sales = new Sales();
             int p = 0;
+            int newP = 0;
             try {
-                p = Integer.parseInt(price.getText());
+                p = Integer.parseInt(priceOrg.getText());
+                newP = Integer.parseInt(price.getText());
+
             } catch (Exception e) {
             }
             Validator check = new Validator();
@@ -485,12 +505,14 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
             boolean checkProductName = check.ProductName(name.getText());
             if (checkProductPrice == true && checkProductName == true && checkProductID == true) {
                 sales.setProductPrice(p);
+                sales.setNewPrice(newP);
                 sales.setSalesPercentage(SalePer.getSelectedItem().toString());
                 sales.setSalesTimeDuration(time.getText());
                 sales.setProductID(id.getText());
                 sales.setProductName(name.getText());
                 int quantity = Integer.parseInt(quan.getSelectedItem().toString());
                 sales.setProductQuantity(quantity);
+                sales.setDes(desc.getText());
                 sales.setProductType(type.getSelectedItem().toString());
                 for (int i = 0; i < M.SalesList.size(); i++) {
                     Sales s = (Sales) (M.getSalesList().get(i));
@@ -499,7 +521,8 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
                         String proName = name.getText();
                         String proType = type.getSelectedItem().toString();
                         String q = quan.getSelectedItem().toString();
-                        String Productprice = price.getText();
+                        String Productprice = priceOrg.getText();
+                        String salesPrice = price.getText();
                         String perc = SalePer.getSelectedItem().toString();
                         String times = time.getText();
                         tableModel.setValueAt(ID, jTable1.getSelectedRow(), 0);
@@ -507,23 +530,24 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
                         tableModel.setValueAt(proType, jTable1.getSelectedRow(), 2);
                         tableModel.setValueAt(q, jTable1.getSelectedRow(), 3);
                         tableModel.setValueAt(Productprice, jTable1.getSelectedRow(), 4);
-                        tableModel.setValueAt(perc, jTable1.getSelectedRow(), 5);
-                        tableModel.setValueAt(times, jTable1.getSelectedRow(), 6);
+                        tableModel.setValueAt(salesPrice, jTable1.getSelectedRow(), 5);
+                        tableModel.setValueAt(perc, jTable1.getSelectedRow(), 6);
+                        tableModel.setValueAt(times, jTable1.getSelectedRow(), 7);
                         M.SalesList.set(i, sales);
                     }
                 }
 
                 JOptionPane.showMessageDialog(null, "Data has been updated successfully");
                 for (int i = 0; i < M.SalesList.size(); i++) {
-                    Sales s = (Sales) (M.getSalesList().get(i));
-                    JOptionPane.showMessageDialog(null, s + s.getSalesPercentage()
-                            + s.getNewPrice() + s.getSalesTimeDuration()
-                    );
+
+                    JOptionPane.showMessageDialog(null, M.getSalesList().get(i));
+
                 }
                 id.setText("");
                 name.setText("");
                 time.setText("");
                 desc.setText("");
+                priceOrg.setText("");
                 price.setText("");
 
             }
@@ -551,6 +575,39 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
 
     private void DeleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteButtonActionPerformed
         // TODO add your handling code here:
+        DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
+        if (jTable1.getSelectedRowCount() == 1) {
+            String ID = tableModel.getValueAt(jTable1.getSelectedRow(), 0).toString();
+            String names = tableModel.getValueAt(jTable1.getSelectedRow(), 1).toString();
+            String quantity = tableModel.getValueAt(jTable1.getSelectedRow(), 2).toString();
+            String protype = tableModel.getValueAt(jTable1.getSelectedRow(), 3).toString();
+            String priceOriginal = tableModel.getValueAt(jTable1.getSelectedRow(), 4).toString();
+            String salesPrice = tableModel.getValueAt(jTable1.getSelectedRow(), 5).toString();
+            String perc = tableModel.getValueAt(jTable1.getSelectedRow(), 6).toString();
+            String salesTime = tableModel.getValueAt(jTable1.getSelectedRow(), 7).toString();
+            M.removeSales(ID);
+            tableModel.removeRow(jTable1.getSelectedRow());
+            id.setText("");
+            price.setText("");
+            name.setText("");
+            time.setText("");
+            desc.setText("");
+            JOptionPane.showMessageDialog(null, "Size of Linked List :" + M.SalesList.size());
+            JOptionPane.showMessageDialog(null, "Data has been Deleted successfully");
+
+            for (int i = 0; i < M.SalesList.size(); i++) {
+
+                JOptionPane.showMessageDialog(null, M.getSalesList().get(i));
+
+            }
+        } else {
+            if (jTable1.getSelectedRow() == 0) {
+                JOptionPane.showMessageDialog(null, "You have not selected any Row or may be selected Multiple Rows");
+            } else {
+                JOptionPane.showMessageDialog(null, "Delete action Failed");
+
+            }
+        }
 
 
     }//GEN-LAST:event_DeleteButtonActionPerformed
@@ -559,23 +616,26 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
         DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
         String ID = tableModel.getValueAt(jTable1.getSelectedRow(), 0).toString();
         String proName = tableModel.getValueAt(jTable1.getSelectedRow(), 1).toString();
-        String proType = tableModel.getValueAt(jTable1.getSelectedRow(), 2).toString();
-        String quantity = tableModel.getValueAt(jTable1.getSelectedRow(), 3).toString();
-        String proPrice = tableModel.getValueAt(jTable1.getSelectedRow(), 4).toString();
-        String per = tableModel.getValueAt(jTable1.getSelectedRow(), 5).toString();
-        String saleTime = tableModel.getValueAt(jTable1.getSelectedRow(), 6).toString();
+        String quantity  = tableModel.getValueAt(jTable1.getSelectedRow(), 2).toString();
+        String proPrice = tableModel.getValueAt(jTable1.getSelectedRow(), 3).toString();
+        String salesPrice = tableModel.getValueAt(jTable1.getSelectedRow(), 4).toString();
+        String ProType = tableModel.getValueAt(jTable1.getSelectedRow(), 5).toString();
+        String per = tableModel.getValueAt(jTable1.getSelectedRow(), 6).toString();
+        String saleTime = tableModel.getValueAt(jTable1.getSelectedRow(), 7).toString();
         //to set Data into the fields
         id.setText(ID);
         name.setText(proName);
-        type.setSelectedItem(proType);
+        type.setSelectedItem(ProType);
         quan.setSelectedItem(quantity);
-        price.setText(proPrice);
+        priceOrg.setText(proPrice);
+        price.setText(salesPrice);
         SalePer.setSelectedItem(per);
         time.setText(saleTime);
         for (int i = 0; i < M.getSalesList().size(); i++) {
             Sales s = (Sales) (M.getSalesList().get(i));
             if (ID.equals(s.getProductID())) {
                 s.setProductID("");
+                s.setProductPrice(0);
                 s.setNewPrice(0);
                 s.setSalesPercentage("");
                 s.setSalesTimeDuration("");
@@ -586,6 +646,10 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
     private void quanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quanActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_quanActionPerformed
+
+    private void priceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_priceActionPerformed
 
     /**
      * @param args the command line arguments
@@ -636,6 +700,7 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -653,6 +718,7 @@ public class AddNewProductsIntoSale extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField name;
     private javax.swing.JTextField price;
+    private javax.swing.JTextField priceOrg;
     private javax.swing.JComboBox<String> quan;
     private javax.swing.JTextField time;
     private javax.swing.JComboBox<String> type;

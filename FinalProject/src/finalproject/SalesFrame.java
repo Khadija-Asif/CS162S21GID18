@@ -57,7 +57,10 @@ public class SalesFrame extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         time = new javax.swing.JTextField();
-        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        desc = new javax.swing.JTextArea();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -159,7 +162,7 @@ public class SalesFrame extends javax.swing.JFrame {
         jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(190, 21, 88));
         jLabel2.setText("      Sales Products");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 250, 40));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 140, 250, 40));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(190, 21, 88));
@@ -178,8 +181,8 @@ public class SalesFrame extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(190, 21, 88));
-        jLabel6.setText("Sales Time Duration");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, -1, -1));
+        jLabel6.setText("Description");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, -1, -1));
 
         ProductID.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(190, 21, 88)));
         jPanel1.add(ProductID, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 340, 30));
@@ -198,7 +201,6 @@ public class SalesFrame extends javax.swing.JFrame {
         DeleteButton.setBackground(new java.awt.Color(190, 21, 88));
         DeleteButton.setForeground(new java.awt.Color(255, 255, 255));
         DeleteButton.setText("Remove Product");
-        DeleteButton.setBorder(null);
         DeleteButton.setBorderPainted(false);
         DeleteButton.setDefaultCapable(false);
         DeleteButton.setFocusPainted(false);
@@ -219,12 +221,11 @@ public class SalesFrame extends javax.swing.JFrame {
                 DeleteButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(DeleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 450, 150, 40));
+        jPanel1.add(DeleteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 490, 150, 40));
 
         UpdateButton.setBackground(new java.awt.Color(190, 21, 88));
         UpdateButton.setForeground(new java.awt.Color(255, 255, 255));
         UpdateButton.setText("Update Product Sale");
-        UpdateButton.setBorder(null);
         UpdateButton.setBorderPainted(false);
         UpdateButton.setDefaultCapable(false);
         UpdateButton.setFocusPainted(false);
@@ -245,12 +246,11 @@ public class SalesFrame extends javax.swing.JFrame {
                 UpdateButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(UpdateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 450, 140, 40));
+        jPanel1.add(UpdateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 490, 140, 40));
 
         AddButton.setBackground(new java.awt.Color(190, 21, 88));
         AddButton.setForeground(new java.awt.Color(255, 255, 255));
         AddButton.setText("Add Product");
-        AddButton.setBorder(null);
         AddButton.setBorderPainted(false);
         AddButton.setDefaultCapable(false);
         AddButton.setFocusPainted(false);
@@ -271,7 +271,7 @@ public class SalesFrame extends javax.swing.JFrame {
                 AddButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(AddButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, 140, 40));
+        jPanel1.add(AddButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 490, 140, 40));
 
         jTable1.setForeground(new java.awt.Color(190, 21, 88));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -293,8 +293,19 @@ public class SalesFrame extends javax.swing.JFrame {
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 560, 900, 90));
         jPanel1.add(time, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 370, 340, 30));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/2.jpg"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 920, 680));
+        jLabel8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(190, 21, 88));
+        jLabel8.setText("Sales Time Duration");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 370, -1, -1));
+
+        desc.setColumns(20);
+        desc.setRows(5);
+        jScrollPane2.setViewportView(desc);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 410, 340, 50));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/2.jpg"))); // NOI18N
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 920, 680));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -374,10 +385,9 @@ public class SalesFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Data has been Deleted successfully");
 
             for (int i = 0; i < M.SalesList.size(); i++) {
-                Sales s = (Sales) (M.getSalesList().get(i));
-                JOptionPane.showMessageDialog(null, s + s.getSalesPercentage()
-                        + s.getNewPrice() + s.getSalesTimeDuration()
-                );
+
+                JOptionPane.showMessageDialog(null, M.getSalesList().get(i));
+
             }
         } else {
             if (jTable1.getSelectedRow() == 0) {
@@ -411,6 +421,7 @@ public class SalesFrame extends javax.swing.JFrame {
             sales.setNewPrice(p);
             sales.setSalesPercentage(SalePer.getSelectedItem().toString());
             sales.setSalesTimeDuration(time.getText());
+            sales.setDes(desc.getText());
             boolean checkProductPrice = check.ProductPrice(sales.getNewPrice());
             if (checkProductPrice == true) {
                 for (int i = 0; i < M.SalesList.size(); i++) {
@@ -446,10 +457,9 @@ public class SalesFrame extends javax.swing.JFrame {
 
                 JOptionPane.showMessageDialog(null, "Data has been updated successfully");
                 for (int i = 0; i < M.SalesList.size(); i++) {
-                    Sales s = (Sales) (M.getSalesList().get(i));
-                    JOptionPane.showMessageDialog(null, s + s.getSalesPercentage()
-                            + s.getNewPrice() + s.getSalesTimeDuration()
-                    );
+
+                    JOptionPane.showMessageDialog(null, M.getSalesList().get(i));
+
                 }
                 ProductID.setText("");
                 newPrice.setText("");
@@ -487,6 +497,7 @@ public class SalesFrame extends javax.swing.JFrame {
         sales.setNewPrice(price);
         sales.setSalesPercentage(SalePer.getSelectedItem().toString());
         sales.setSalesTimeDuration(time.getText());
+        sales.setDes(desc.getText());
 
         boolean checkProductID = check.ProductID(sales.getProductID());
 
@@ -520,11 +531,9 @@ public class SalesFrame extends javax.swing.JFrame {
                 sales.setProductPrice(proPrice);
                 sales.setProductType(type);
                 M.addProductsSales(sales);
-
-                Sales s = (Sales) (M.getSalesList().get(0));
-                JOptionPane.showMessageDialog(null, s + s.getSalesPercentage()
-                        + s.getNewPrice() + s.getSalesTimeDuration()
-                );
+                for (int i = 0; i < M.getSalesList().size(); i++) {
+                    JOptionPane.showMessageDialog(null, M.getSalesList().get(i));
+                }
                 ProductID.setText("");
                 time.setText("");
             } else {
@@ -554,10 +563,10 @@ public class SalesFrame extends javax.swing.JFrame {
         ProductID.setText(ID);
         newPrice.setText(prices);
         time.setText(saletime);
-
         for (int i = 0; i < M.getSalesList().size(); i++) {
             Sales s = (Sales) (M.getSalesList().get(i));
             if (ID.equals(s.getProductID())) {
+                desc.setText(s.getDesc());
                 s.setNewPrice(0);
                 s.setSalesPercentage("");
                 s.setSalesTimeDuration("");
@@ -576,18 +585,21 @@ public class SalesFrame extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> SalePer;
     private javax.swing.JButton UpdateButton;
     private javax.swing.JPanel closePannel;
+    private javax.swing.JTextArea desc;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField newPrice;
     private javax.swing.JTextField time;
