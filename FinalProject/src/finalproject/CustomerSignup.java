@@ -206,7 +206,8 @@ public class CustomerSignup extends javax.swing.JFrame {
         
         if(chkName == true && chkNo == true && chkAdd == true && chkCity == true && chkCode == true && chkEmail == true && chkPass == true)
         {
-            // shopping page.   
+            CustomerHomeScreen home = new CustomerHomeScreen();
+            home.setVisible(true);
         }
         else
         {

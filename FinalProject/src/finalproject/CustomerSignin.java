@@ -139,7 +139,8 @@ public class CustomerSignin extends javax.swing.JFrame {
         boolean chkPass = v.Password(Password);
         if(chkEmail == true && chkPass == true)
         {
-        // shopping page show hoga.
+            CustomerHomeScreen home = new CustomerHomeScreen();
+            home.setVisible(true);
         }
         else
         {
