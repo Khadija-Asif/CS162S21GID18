@@ -216,6 +216,11 @@ public class Clothes extends javax.swing.JFrame {
 
         button1.setBackground(new java.awt.Color(204, 204, 255));
         button1.setText("Add to cart");
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(button1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, 100, 20));
 
         button7.setBackground(new java.awt.Color(204, 204, 255));
@@ -284,6 +289,10 @@ public class Clothes extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_button1ActionPerformed
 
     /**
      * @param args the command line arguments

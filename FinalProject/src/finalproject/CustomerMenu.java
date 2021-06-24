@@ -318,6 +318,8 @@ public class CustomerMenu extends javax.swing.JFrame {
 
     private void GuestButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuestButtonActionPerformed
         // TODO add your handling code here:
+        CustomerHomeScreen home = new CustomerHomeScreen();
+        home.setVisible(true);
     }//GEN-LAST:event_GuestButtonActionPerformed
 
     private void SignUpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpButtonActionPerformed
