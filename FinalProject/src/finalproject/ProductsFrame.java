@@ -431,9 +431,6 @@ public class ProductsFrame extends javax.swing.JFrame {
     private void UpdateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateButtonActionPerformed
         // TODO add your handling code here:
         DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
-        JOptionPane.showMessageDialog(null, tableModel.getColumnCount());
-        JOptionPane.showMessageDialog(null, tableModel.getRowCount());
-
         if (jTable1.getSelectedRowCount() == 1) {
             Products pro = new Products();
             Validator check = new Validator();
@@ -461,8 +458,8 @@ public class ProductsFrame extends javax.swing.JFrame {
                 String type = ProductType.getSelectedItem().toString();
                 tableModel.setValueAt(ID, jTable1.getSelectedRow(), 0);
                 tableModel.setValueAt(name, jTable1.getSelectedRow(), 1);
-                tableModel.setValueAt(Productprice, jTable1.getSelectedRow(), 2);
-                tableModel.setValueAt(Productquantity, jTable1.getSelectedRow(), 3);
+                tableModel.setValueAt(Productquantity, jTable1.getSelectedRow(), 2);
+                tableModel.setValueAt(Productprice, jTable1.getSelectedRow(), 3);
                 tableModel.setValueAt(type, jTable1.getSelectedRow(), 4);
                 for (int i = 0; i < Customer_Director.prod.size(); i++) {
                     Products p = Customer_Director.prod.get(i);

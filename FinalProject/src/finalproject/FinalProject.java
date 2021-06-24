@@ -16,9 +16,8 @@ public class FinalProject {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    MainScreen M = new MainScreen();
-    M.setVisible(true);
-        
+        MainScreen M = new MainScreen();
+        M.setVisible(true);
 
     }
 }
