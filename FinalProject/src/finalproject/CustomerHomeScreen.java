@@ -43,6 +43,12 @@ public class CustomerHomeScreen extends javax.swing.JFrame {
         entered3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        entered5 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
+        entered4 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jButton10 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         Dresses = new javax.swing.JPanel();
@@ -87,7 +93,7 @@ public class CustomerHomeScreen extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_content_40px_2.png"))); // NOI18N
         jLabel1.setText(" DashBoard");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 280, 60));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 270, 60));
 
         entered1.setBackground(new java.awt.Color(190, 21, 88));
         entered1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -106,10 +112,11 @@ public class CustomerHomeScreen extends javax.swing.JFrame {
         });
         entered1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 80, 60));
 
+        jButton8.setBackground(new java.awt.Color(190, 21, 88));
         jButton8.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         jButton8.setForeground(new java.awt.Color(255, 255, 255));
         jButton8.setText("Home");
-        jButton8.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 51), 3, true));
+        jButton8.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
@@ -117,7 +124,7 @@ public class CustomerHomeScreen extends javax.swing.JFrame {
         });
         entered1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 140, 40));
 
-        jPanel2.add(entered1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 340, 70));
+        jPanel2.add(entered1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 310, 70));
 
         entered2.setBackground(new java.awt.Color(190, 21, 88));
         entered2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -135,10 +142,11 @@ public class CustomerHomeScreen extends javax.swing.JFrame {
         });
         entered2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 50, 50));
 
+        jButton9.setBackground(new java.awt.Color(190, 21, 88));
         jButton9.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
         jButton9.setText("Feedback");
-        jButton9.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 51), 3, true));
+        jButton9.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -146,14 +154,14 @@ public class CustomerHomeScreen extends javax.swing.JFrame {
         });
         entered2.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 140, 40));
 
-        jPanel2.add(entered2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 340, 80));
+        jPanel2.add(entered2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 320, 80));
 
         entered3.setBackground(new java.awt.Color(190, 21, 88));
         entered3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_help_40px_1.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_search_40px.png"))); // NOI18N
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jLabel4MouseEntered(evt);
@@ -162,20 +170,81 @@ public class CustomerHomeScreen extends javax.swing.JFrame {
                 jLabel4MouseExited(evt);
             }
         });
-        entered3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 50, 70));
+        entered3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 60));
 
+        jButton3.setBackground(new java.awt.Color(190, 21, 88));
         jButton3.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Help");
-        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 51), 3, true));
+        jButton3.setText("Search Product");
+        jButton3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        entered3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 140, 40));
+        entered3.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 150, 40));
 
-        jPanel2.add(entered3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 340, 90));
+        entered5.setBackground(new java.awt.Color(190, 21, 88));
+        entered5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel7.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_help_40px_1.png"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel7MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel7MouseExited(evt);
+            }
+        });
+        entered5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 50, 70));
+
+        jButton11.setBackground(new java.awt.Color(190, 21, 88));
+        jButton11.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        jButton11.setForeground(new java.awt.Color(255, 255, 255));
+        jButton11.setText("Help");
+        jButton11.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
+        entered5.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 140, 40));
+
+        entered3.add(entered5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 320, 90));
+
+        jPanel2.add(entered3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, 320, 90));
+
+        entered4.setBackground(new java.awt.Color(190, 21, 88));
+        entered4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_help_40px_1.png"))); // NOI18N
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel5MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel5MouseExited(evt);
+            }
+        });
+        entered4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 50, 70));
+
+        jButton10.setBackground(new java.awt.Color(190, 21, 88));
+        jButton10.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        jButton10.setForeground(new java.awt.Color(255, 255, 255));
+        jButton10.setText("Help");
+        jButton10.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        entered4.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 140, 40));
+
+        jPanel2.add(entered4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 320, 90));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 340, 660));
 
@@ -593,8 +662,8 @@ public class CustomerHomeScreen extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Clothes clothe = new Clothes();
-        clothe.setVisible(true);
+        Clothes cloth = new Clothes();
+        cloth.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseEntered
@@ -685,9 +754,35 @@ public class CustomerHomeScreen extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Hey! Welcome to the store\n This website is made for your convenience."
-                + "\nFor accessing any category, click on that icon.\n Thank you!");
+        SearchProduct s = new SearchProduct();
+        s.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel5MouseEntered
+
+    private void jLabel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel5MouseExited
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+        Help h = new Help();
+        h.setVisible(true);
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jLabel7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel7MouseEntered
+
+    private void jLabel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel7MouseExited
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -743,7 +838,11 @@ public class CustomerHomeScreen extends javax.swing.JFrame {
     private javax.swing.JPanel entered1;
     private javax.swing.JPanel entered2;
     private javax.swing.JPanel entered3;
+    private javax.swing.JPanel entered4;
+    private javax.swing.JPanel entered5;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -756,7 +855,9 @@ public class CustomerHomeScreen extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

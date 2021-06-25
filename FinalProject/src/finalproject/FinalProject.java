@@ -17,9 +17,13 @@ public class FinalProject {
     public static void main(String[] args) {
         // TODO code application logic here
 
-        MainScreen M = new MainScreen();
-        M.setVisible(true);
-
+       /*ProductsFrame prd = new ProductsFrame();
+       prd.setVisible(true);
+       
+       /*ViewStock view = new ViewStock();
+       view.setVisible(true);*/
+       CustomerMenu menu = new CustomerMenu();
+       menu.setVisible(true);
 
     }
 }

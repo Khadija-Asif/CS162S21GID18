@@ -105,7 +105,9 @@ public class Feedback extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 50));
 
+        signup.setBackground(new java.awt.Color(190, 21, 88));
         signup.setFont(new java.awt.Font("Microsoft YaHei", 1, 18)); // NOI18N
+        signup.setForeground(new java.awt.Color(255, 255, 255));
         signup.setText("Submit");
         signup.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 0, 51), 3, true));
         signup.addActionListener(new java.awt.event.ActionListener() {

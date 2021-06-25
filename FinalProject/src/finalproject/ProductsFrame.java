@@ -415,6 +415,8 @@ public class ProductsFrame extends javax.swing.JFrame {
                 System.out.println("Products Invalid");
             }
         }
+        /*this.setVisible(false);
+        new SalesFrame().setVisible(true);*/
 
     }//GEN-LAST:event_AddButtonActionPerformed
 
@@ -563,7 +565,7 @@ public class ProductsFrame extends javax.swing.JFrame {
 
             }
         }
-
+        
     }//GEN-LAST:event_jTable1MouseClicked
 
     /**

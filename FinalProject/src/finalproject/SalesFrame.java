@@ -540,6 +540,8 @@ public class SalesFrame extends javax.swing.JFrame {
                 System.out.println("Products Invalid");
             }
         }
+        /*new ViewStock().setVisible(true);
+        this.setVisible(false);*/
 
     }//GEN-LAST:event_AddButtonActionPerformed
 

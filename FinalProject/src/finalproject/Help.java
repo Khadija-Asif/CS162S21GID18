@@ -9,12 +9,12 @@ package finalproject;
  *
  * @author Hafsa Rashid
  */
-public class Receipt extends javax.swing.JFrame {
+public class Help extends javax.swing.JFrame {
 
     /**
-     * Creates new form Receipt
+     * Creates new form Help
      */
-    public Receipt() {
+    public Help() {
         initComponents();
     }
 
@@ -33,11 +33,11 @@ public class Receipt extends javax.swing.JFrame {
         minimize = new javax.swing.JLabel();
         close = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -45,56 +45,28 @@ public class Receipt extends javax.swing.JFrame {
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         title.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
-        title.setForeground(new java.awt.Color(255, 255, 255));
-        title.setText("Receipt");
-        jPanel2.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 90, -1));
+        title.setText("Help");
+        jPanel2.add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 70, -1));
 
         minimize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_minimize_window_30px.png"))); // NOI18N
-        jPanel2.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 10, 30, 30));
+        jPanel2.add(minimize, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 29, 33));
 
         close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/icons8_multiply_30px_1.png"))); // NOI18N
-        jPanel2.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 10, -1, 33));
+        jPanel2.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 10, -1, 33));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1120, 50));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 50));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/receipt1.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 560, 560));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/hel.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 340, -1, -1));
 
-        jTable1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jTable1.setForeground(new java.awt.Color(190, 21, 88));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "Product ID", "Name", "Contact No", "Address", "Date", "Bill"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jScrollPane2.setViewportView(jTable1);
-
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 130, 530, 90));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/receipt.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 50, 560, 560));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/help.jpg"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 540, 620));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,20 +93,20 @@ public class Receipt extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Receipt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Receipt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Receipt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Receipt.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Help.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Receipt().setVisible(true);
+                new Help().setVisible(true);
             }
         });
     }
@@ -145,8 +117,6 @@ public class Receipt extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel minimize;
     private javax.swing.JLabel title;
     // End of variables declaration//GEN-END:variables

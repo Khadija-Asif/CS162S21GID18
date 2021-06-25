@@ -102,6 +102,11 @@ public class DirectorMenu extends javax.swing.JFrame {
         jButton1.setRequestFocusEnabled(false);
         jButton1.setRolloverEnabled(false);
         jButton1.setVerifyInputWhenFocusTarget(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 540, 210, 60));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/finalproject/Images/background2.jpg"))); // NOI18N
@@ -130,6 +135,11 @@ public class DirectorMenu extends javax.swing.JFrame {
         jButton5.setRequestFocusEnabled(false);
         jButton5.setRolloverEnabled(false);
         jButton5.setVerifyInputWhenFocusTarget(false);
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 320, 210, 60));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -161,7 +171,19 @@ public class DirectorMenu extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
+        ViewStock view = new ViewStock();
+        view.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Help h = new Help();
+        h.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

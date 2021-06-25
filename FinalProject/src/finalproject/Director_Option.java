@@ -142,7 +142,7 @@ public class Director_Option extends javax.swing.JFrame {
 
         jButton2.setBackground(new java.awt.Color(190, 21, 88));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Want to add Sales From the already Existing Product");
+        jButton2.setText("Add Sales on existing products");
         jButton2.setFocusPainted(false);
         jButton2.setFocusable(false);
         jButton2.setRequestFocusEnabled(false);
@@ -157,7 +157,7 @@ public class Director_Option extends javax.swing.JFrame {
 
         jButton1.setBackground(new java.awt.Color(190, 21, 88));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Want to add Sales of New Products");
+        jButton1.setText("Add Sales on new products");
         jButton1.setFocusPainted(false);
         jButton1.setFocusable(false);
         jButton1.setRequestFocusEnabled(false);
