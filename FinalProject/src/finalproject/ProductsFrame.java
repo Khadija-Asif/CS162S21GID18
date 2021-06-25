@@ -399,7 +399,7 @@ public class ProductsFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "You have not entered all required Data");
         } else {
             if (checkProductID == true && checkProductName == true && checkProductPrice == true) {
-                String data[] = {ProductID.getText(), ProductName.getText(), ProductPrice.getText(), QuantityCombo.getSelectedItem().toString(), ProductType.getSelectedItem().toString()};
+                String data[] = {ProductID.getText(), ProductName.getText(), QuantityCombo.getSelectedItem().toString(), ProductPrice.getText(), ProductType.getSelectedItem().toString()};
                 System.out.println(data.length);
                 DefaultTableModel tableModel = (DefaultTableModel) jTable1.getModel();
                 tableModel.addRow(data);
